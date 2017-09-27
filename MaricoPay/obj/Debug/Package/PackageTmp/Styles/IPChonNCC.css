@@ -1,0 +1,124 @@
+﻿.RadGrid a.bookNowLink:visited,
+.RadGrid a.bookNowLink:link,
+.RadGrid a.bookNowLink:hover,
+.RadGrid a.bookNowLink:active {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ 
+div.qsf-right-content .qsf-col-wrap {
+    padding-right: 0;
+}
+ 
+div.carTitle {
+    font-size: 15pt;
+    padding: 30px 0 5px 0;
+}
+ 
+.carBackground {
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    height: 263px;
+    border-top: 1px solid #dae2e8;
+    border-bottom: 1px solid #dae2e8;
+    padding: 20px 20px 10px 30px;
+}
+ 
+.carInfo {
+    line-height: 24px;
+}
+ 
+hr.lineSeparator {
+    color: #a9b5be;
+    background-color: #a9b5be;
+    height: 1px;
+    border: none;
+}
+ 
+.bookNowTitle {
+    font-size: 20px;
+}
+ 
+.bookNowFrame {
+    padding: 20px 0 20px 20px;
+     
+}
+ 
+.RadWindow .rwCorner .rwTopLeft,
+.RadWindow .rwTitlebar,
+.RadWindow .rwCorner .rwTopRight,
+.RadWindow .rwIcon,
+.RadWindow table .rwTopLeft,
+.RadWindow table .rwTopRight,
+.RadWindow table .rwFooterLeft,
+.RadWindow table .rwFooterRight,
+.RadWindow table .rwFooterCenter,
+.RadWindow table .rwBodyLeft,
+.RadWindow table .rwBodyRight,
+.RadWindow table .rwTitlebar,
+.RadWindow table .rwTopResize,
+.RadWindow table .rwStatusbar {
+    display: none;
+}
+ 
+div.RadGrid_WebBlue .rgFilterRow td {
+    padding-bottom: 4px;
+    padding-top: 8px;
+}
+ 
+.rbDecorated {
+    padding-right: 10px !important;
+}
+ 
+span.RadButton {
+    vertical-align: top;
+}
+ 
+/*Page Layout*/
+.gridHeader {
+    position: relative;
+    background-image: url(Images/btns.png);
+    background-repeat: no-repeat;
+    background-position: 100% -80px;
+    padding-right: 161px;
+}
+ 
+.gridHeader > div {
+    background: #9ad0da url("Images/header.png") no-repeat;
+    height: 80px;
+    margin: 0;
+}
+ 
+.gridHeader button.saveButton,
+.gridHeader button.loadButton {
+    height: 80px;
+    width: 80px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(Images/btns.png) no-repeat 0 0;
+    overflow: hidden;
+    border: 0 none;
+    border-radius: 0;
+}
+ 
+.gridHeader .saveButton span,
+.gridHeader .loadButton span {
+    text-indent: -9999px;
+    display: block;
+}
+ 
+.gridHeader button.saveButton {
+    right: 81px;
+    background-position: -80px 0;
+}
+ 
+* + html .demo-container {
+    max-width: 1040px;
+}
+ 
+div.demo-container {
+    border: 0 none;
+    padding: 0;
+}

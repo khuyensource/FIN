@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.75, 18" name="DBTable">
+  <DataContextMoniker Name="/DBTableDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4ce87d05-52d5-43c9-9a87-9b32ef21f152" absoluteBounds="0.625, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBTableDataContext/Charge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c6f3de0-def3-4e61-b173-181fcc967cc8" absoluteBounds="0.64000000000000012, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e12fe2e2-3d47-4417-b796-6c62e28f3085" absoluteBounds="0.5, 2.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DBTableDataContext/log" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6192bd8-d1e1-422b-9d54-175575722ad4" absoluteBounds="0.51500000000000012, 3.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cfbe2833-ad7b-46f3-8c8c-24857efc827b" absoluteBounds="5.625, 5.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBTableDataContext/Market" />
+      <nestedChildShapes>
+        <elementListCompartment Id="caafe89f-2ce2-4caf-ba60-991aaeb293af" absoluteBounds="5.64, 5.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8050a95c-5edf-4af8-8bdb-b8c71c5c8bed" absoluteBounds="0.5, 7.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DBTableDataContext/RequestTravelDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="610de453-1ea6-4238-a98e-f54f27f9f1a3" absoluteBounds="0.51499999999999968, 8.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dade79d3-e505-485e-b43e-d56a7158bd8f" absoluteBounds="5, 8.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DBTableDataContext/Approve" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6ff46a4-7746-406b-bfb2-09012eb83470" absoluteBounds="5.015, 8.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="39caab1c-a675-4d7d-bfd3-411c7069f409" absoluteBounds="7.375, 0.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBTableDataContext/Vendor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="94113a97-81d2-41b9-92ef-1b113d364729" absoluteBounds="7.3900000000000006, 1.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d77a4a7-f02e-4c33-b76e-249759c96053" absoluteBounds="7.75, 2.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBTableDataContext/ContractType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6224d4f-5058-4fb5-a7db-8fa0c0a57808" absoluteBounds="7.765, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="416040b8-65d3-4397-ae48-a0124c0c5f70" absoluteBounds="12.5, 1.125, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/DBTableDataContext/ClaimExpense" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f687557-0f97-4126-b080-f08f5a02bfdc" absoluteBounds="12.515, 1.585, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="97906359-d7c5-4aa5-9e6c-8db3c17feaf4" absoluteBounds="2.75, 0.75, 2, 5.4246240234375">
+      <DataClassMoniker Name="/DBTableDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="584bc169-32d1-43a1-94c1-554f67010afd" absoluteBounds="2.765, 1.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.625 : 5.71231201171875); (4.75 : 5.71231201171875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBTableDataContext/Market/Market_User" />
+      <nodes>
+        <classShapeMoniker Id="cfbe2833-ad7b-46f3-8c8c-24857efc827b" />
+        <classShapeMoniker Id="97906359-d7c5-4aa5-9e6c-8db3c17feaf4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f6f0ae1e-69f7-4519-933e-b6fe00674021" absoluteBounds="5.25, 1, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DBTableDataContext/RequestTravelDetailSale" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c29cd306-0927-42ac-a8de-d6e8f798a724" absoluteBounds="5.265, 1.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e07d33b3-1121-48fb-8f1d-a647d0fdf3c4" absoluteBounds="0.5, 5.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DBTableDataContext/DepartmentMPAY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79f2c959-353b-463a-a43a-84abf520802d" absoluteBounds="0.51500000000000012, 5.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5c91bc2c-8dc7-44ba-bcc1-859796ef64bb" absoluteBounds="0.5, 10.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBTableDataContext/UserAddition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ecc115d-9e0f-46ba-b706-2e8b325c7d6b" absoluteBounds="0.51499999999999968, 10.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ee81704-2b50-4ace-947c-f19cf444acf1" absoluteBounds="10, 0.75, 2, 8.1168440755208326">
+      <DataClassMoniker Name="/DBTableDataContext/ClaimExpensesDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9989c552-3493-4f1e-aeb9-68b6860ae07f" absoluteBounds="10.015, 1.21, 1.9700000000000002, 7.556844075520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12.5 : 4.89496988932292); (12 : 4.89496988932292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBTableDataContext/ClaimExpense/ClaimExpense_ClaimExpensesDetail" />
+      <nodes>
+        <classShapeMoniker Id="416040b8-65d3-4397-ae48-a0124c0c5f70" />
+        <classShapeMoniker Id="1ee81704-2b50-4ace-947c-f19cf444acf1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ea6e92ee-6d40-455e-b675-51c78ca40325" absoluteBounds="2.75, 8.125, 2, 9.6552555338541648">
+      <DataClassMoniker Name="/DBTableDataContext/RequestTravel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd568631-718e-40eb-b64e-5ed91ed179bf" absoluteBounds="2.765, 8.585, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

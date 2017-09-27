@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FIN" Class="DBStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=172.17.0.88;Initial Catalog=FIN;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MPAYConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.IsExistsUser" Method="IsExistsUser">
+    <Parameter Name="username" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="IsExistsUserResult">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Department_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Market_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Position_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Recommender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Function_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsManager" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Area_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Level_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SP_Lay_PhanQuyen_ID" Method="SP_Lay_PhanQuyen_ID">
+    <Parameter Name="manv" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idsite" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="SP_Lay_PhanQuyen_IDResult">
+      <Column Name="IDSITE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaNV" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDQuyen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_UpdateDocTotal" Method="sp_UpdateDocTotal">
+    <Parameter Name="code" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_getClaimApproved" Method="sp_getClaimApproved">
+    <Parameter Name="username" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_getClaimApprovedResult">
+      <Column Name="[Values]" Member="Values" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetClaimExpenses_Print" Method="sp_GetClaimExpenses_Print">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_GetClaimExpenses_PrintResult">
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeText" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameRec" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Signture" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GenaCode" Method="sp_GenaCode">
+    <Parameter Name="code" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="sp_GenaCodeResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_LoadTotalClaim4Doc" Method="sp_LoadTotalClaim4Doc">
+    <Parameter Name="code" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="sp_LoadTotalClaim4DocResult">
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Total_VND" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="AVG_VND" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getClaimSaved" Method="sp_getClaimSaved">
+    <Parameter Name="username" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Type" Parameter="type" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="sp_getClaimSavedResult">
+      <Column Name="[Values]" Member="Values" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetClaimExpensesOffice_Print" Method="sp_GetClaimExpensesOffice_Print">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_GetClaimExpensesOffice_PrintResult">
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TypeText" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameRec" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DaTamUng" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Signture" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getTravelDetail" Method="sp_getTravelDetail">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_getTravelDetailResult">
+      <Column Name="Code_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Charges_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoTien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cong" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsTamUng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetTravelRequest_Print" Method="sp_GetTravelRequest_Print">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_GetTravelRequest_PrintResult">
+      <Column Name="Department" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Approver" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TelContact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Itenerary" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ByCar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ByTrain" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ByPlane" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CarAriPort" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CarTravel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BookHotel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BookTicket" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Other" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DetailOther" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Advance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Signture" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="DPNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetUserInfo_TravelExists" Method="sp_GetUserInfo_TravelExists">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_GetUserInfo_TravelExistsResult">
+      <Column Name="Market" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullNameRec" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EmailRec" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoteApprover" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Itenerary" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TelContact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ByCar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ByTrain" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ByPlane" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CarAriPort" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CarTravel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BookHotel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BookTicket" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StatusText" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Other" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DetailOther" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DPNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AdvanceAmount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetUserInfo" Method="sp_GetUserInfo">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_GetUserInfoResult">
+      <Column Name="Market" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(301)" CanBeNull="true" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="FullNameRec" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="EmailRec" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="StatusText" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TelPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BudgetOwner" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_GetUserInfo_ClaimExists" Method="sp_GetUserInfo_ClaimExists">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_GetUserInfo_ClaimExistsResult">
+      <Column Name="Market" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FullNameRec" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EmailRec" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DaTamUng" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoteApprover" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="StatusText" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AdvanceDocNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NguoiThuHuong" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getClaimDetail" Method="sp_getClaimDetail">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="isSubtotal" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="sp_getClaimDetailResult">
+      <Column Name="Code_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="No" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Notation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Charges_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TotalVN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PictureURL" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="VATCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VATAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NoDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="DetailExpenses" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Participant" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="GL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FileAttach" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CurrencyDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_getTravelDetailSales" Method="sp_getTravelDetailSales">
+    <Parameter Name="Code" Parameter="code" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_getTravelDetailSalesResult">
+      <Column Name="Code_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PurposeMorning" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PurposeAfter" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

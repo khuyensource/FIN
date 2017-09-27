@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60CB8C7B-53A7-44C9-BFEC-D570DC173294}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaricoPay</RootNamespace>
+    <AssemblyName>MaricoPay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+    <PublishDatabases>true</PublishDatabases>
+    <DesktopBuildPackageLocation>..\..\..\..\..\Pulish\FIN\MaricoPay.zip</DesktopBuildPackageLocation>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit-1.0.20229.24049.1.0.20229.24049\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.10.1.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.10.1\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.2\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.1.0.2\lib\net40\Microsoft.IdentityModel.Clients.ActiveDirectory.WindowsForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 14.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2014.2.724.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AddASPF.aspx" />
+    <Content Include="admin.aspx" />
+    <Content Include="ADUser.aspx" />
+    <Content Include="ApprovalASPF.aspx" />
+    <Content Include="ApprovalOnline.aspx" />
+    <Content Include="ApproveColec.aspx" />
+    <Content Include="approved.aspx" />
+    <Content Include="App_Themes\Default\mpImgs\att.png" />
+    <Content Include="App_Themes\Default\mpImgs\err.png" />
+    <Content Include="App_Themes\Default\mpImgs\inf.png" />
+    <Content Include="App_Themes\Default\mpImgs\suc.png" />
+    <Content Include="ASPF.aspx" />
+    <Content Include="ASPFApproval_Detail.aspx" />
+    <Content Include="ASPFA_Detail_Revise.aspx" />
+    <Content Include="ASPFController.aspx" />
+    <Content Include="ASPFDetail.aspx" />
+    <Content Include="ASPFRevise.aspx" />
+    <Content Include="ASPF_Detail_ByIO.aspx" />
+    <Content Include="AutoClose.aspx" />
+    <Content Include="Autotranfer.aspx" />
+    <Content Include="AutotranferList.aspx" />
+    <Content Include="BudgetChecking.aspx" />
+    <Content Include="changepass.aspx" />
+    <Content Include="CheckingOnline.aspx" />
+    <Content Include="ClaimExpenses.aspx" />
+    <Content Include="ClaimExpensesOffice.aspx" />
+    <Content Include="ClaimExpensesOfficeBK.aspx" />
+    <Content Include="approvedTravelRequest.aspx" />
+    <Content Include="contract.aspx" />
+    <Content Include="ContractReport.aspx" />
+    <Content Include="ClaimExpensesSales.aspx" />
+    <Content Include="ClaimSalesExportSAP.aspx" />
+    <Content Include="ClaimSalesExportTotal.aspx" />
+    <Content Include="ApproveColecWK.aspx" />
+    <Content Include="TR_EC_Tracking.aspx" />
+    <Content Include="NewEmployee1.aspx" />
+    <Content Include="uc\ucNewEmployee.ascx" />
+    <Content Include="vendoradmin.aspx" />
+    <Content Include="images\saochep.png" />
+    <Content Include="ReportIPPR.aspx" />
+    <Content Include="IPChonNCC.aspx" />
+    <Content Include="IPPurRequest.aspx" />
+    <Content Include="IPMaterials.aspx" />
+    <Content Include="IPVendorMaterial.aspx" />
+    <Content Include="IPVendors.aspx" />
+    <Content Include="ip_ipinput.aspx" />
+    <Content Include="IP_NCCInput.aspx" />
+    <Content Include="ReportClaimSales.aspx" />
+    <Content Include="ReportWorkingPlan.aspx" />
+    <Content Include="PrintTravelRequestSales.aspx" />
+    <Content Include="PrintClaimSales.aspx" />
+    <Content Include="NewPosition.aspx" />
+    <Content Include="NewEmployee.aspx" />
+    <Content Include="Scripts\IPChonNCC.js" />
+    <Content Include="Styles\IPChonNCC.css" />
+    <Content Include="test.aspx" />
+    <Content Include="TransferBudget.aspx" />
+    <Content Include="TravelRequestSales.aspx" />
+    <Content Include="ExportASPF.aspx" />
+    <Content Include="LegalUpload.aspx" />
+    <Content Include="PopUpLoadLegal.aspx" />
+    <Content Include="PrintContractAdviceNote.aspx" />
+    <Content Include="org.aspx" />
+    <Content Include="DocDefault.aspx" />
+    <Content Include="images\add.png" />
+    <Content Include="images\ajax-loader-bar.gif" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\dong.png" />
+    <Content Include="images\luu.png" />
+    <Content Include="images\process.gif" />
+    <Content Include="JScript\AC_RunActiveContent.js" />
+    <Content Include="JScript\Ajax.js" />
+    <Content Include="JScript\AjaxProgress.js" />
+    <Content Include="JScript\auto.js" />
+    <Content Include="JScript\ContextMenu.js" />
+    <Content Include="JScript\date.js" />
+    <Content Include="JScript\jquery-1.4.1-vsdoc.js" />
+    <Content Include="JScript\jquery-1.4.1.js" />
+    <Content Include="JScript\jquery-1.4.1.min.js" />
+    <Content Include="JScript\jquery-1.4.4.js" />
+    <Content Include="JScript\jquery-1.6.2.js" />
+    <Content Include="JScript\jquery-ui.min.js" />
+    <Content Include="JScript\jquery.alphanumeric.js" />
+    <Content Include="JScript\jquery.blockUI.js" />
+    <Content Include="JScript\jquery.datePicker.js" />
+    <Content Include="JScript\jquery.slidemenu.js" />
+    <Content Include="JScript\JScript.js" />
+    <Content Include="JScript\loader.js" />
+    <Content Include="JScript\nmenu.js" />
+    <Content Include="JScript\preview_products.js" />
+    <Content Include="JScript\rotatorDOM.js" />
+    <Content Include="JScript\swfout.js" />
+    <Content Include="LogoMARICOSEA.png" />
+    <Content Include="Loi.aspx" />
+    <Content Include="PhanQuyen.aspx" />
+    <Content Include="policy.aspx" />
+    <Content Include="PrintAdvanceRequest.aspx" />
+    <Content Include="PrintASPF.aspx" />
+    <Content Include="PrintTravelRequest.aspx" />
+    <Content Include="ProviderASPNo.aspx" />
+    <Content Include="RejectOnline.aspx" />
+    <Content Include="resetpass.aspx" />
+    <Content Include="Styles\Layout.css" />
+    <Content Include="TravelRequest.aspx" />
+    <Content Include="PrintClaimOfficeBK.aspx" />
+    <Content Include="PrintClaimOffice.aspx" />
+    <Content Include="Department.aspx" />
+    <Content Include="ImagesSignature\approved.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="popVAT.aspx" />
+    <Content Include="PrintClaim.aspx" />
+    <Content Include="Scripts\Ajax.js" />
+    <Content Include="Scripts\auto.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="uc\ASPFApproval.ascx" />
+    <Content Include="uc\ASPFApproval_Revise.ascx" />
+    <Content Include="uc\ASPFBugetChecking.ascx" />
+    <Content Include="uc\ASPFBugetCheckin_IO.ascx" />
+    <Content Include="uc\ASPFDetail.ascx" />
+    <Content Include="uc\ASPFRevise.ascx" />
+    <Content Include="uc\InsertIPRequest.ascx" />
+    <Content Include="uc\ip_ipinput.ascx" />
+    <Content Include="uc\UC_IP_NCCInput.ascx" />
+    <Content Include="uc\UpdateIPChonNCC.ascx" />
+    <Content Include="uc\UpdateIPRequest.ascx" />
+    <Content Include="uc\CreateASPF.ascx" />
+    <Content Include="uc\InsertIPVendorMaterial.ascx" />
+    <Content Include="uc\ISIPMaterials.ascx" />
+    <Content Include="uc\ISIPVendors.ascx" />
+    <Content Include="uc\ucChangepass.ascx" />
+    <Content Include="uc\ucResetPass.ascx" />
+    <Content Include="uc\ucViewStatus.ascx" />
+    <Content Include="uc\ucVendor.ascx" />
+    <Content Include="uc\ucCurr.ascx" />
+    <Content Include="uc\InsertDMQuyen.ascx" />
+    <Content Include="uc\InsertDMSITE.ascx" />
+    <Content Include="uc\menu.ascx" />
+    <Content Include="uc\ucComboAdvance.ascx" />
+    <Content Include="uc\ucComboDepartment.ascx" />
+    <Content Include="uc\ucComboCharges.ascx" />
+    <Content Include="uc\ucCurrence.ascx" />
+    <Content Include="uc\ucMsgBox.ascx" />
+    <Content Include="uc\ucUploadimage.ascx" />
+    <Content Include="uc\UpdateDMQuyen.ascx" />
+    <Content Include="uc\UpdateDMSITE.ascx" />
+    <Content Include="uc\UpdateIPVendorMaterial.ascx" />
+    <Content Include="uc\UPIPMaterials.ascx" />
+    <Content Include="uc\UPIPVendors.ascx" />
+    <Content Include="uc\usercontrol.css" />
+    <Content Include="UploadASPF.aspx" />
+    <Content Include="vendor.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddASPF.aspx.cs">
+      <DependentUpon>AddASPF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddASPF.aspx.designer.cs">
+      <DependentUpon>AddASPF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ADUser.aspx.cs">
+      <DependentUpon>ADUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADUser.aspx.designer.cs">
+      <DependentUpon>ADUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalASPF.aspx.cs">
+      <DependentUpon>ApprovalASPF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovalASPF.aspx.designer.cs">
+      <DependentUpon>ApprovalASPF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovalOnline.aspx.cs">
+      <DependentUpon>ApprovalOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApprovalOnline.aspx.designer.cs">
+      <DependentUpon>ApprovalOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveColec.aspx.cs">
+      <DependentUpon>ApproveColec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveColec.aspx.designer.cs">
+      <DependentUpon>ApproveColec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="approved.aspx.cs">
+      <DependentUpon>approved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="approved.aspx.designer.cs">
+      <DependentUpon>approved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPF.aspx.cs">
+      <DependentUpon>ASPF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPF.aspx.designer.cs">
+      <DependentUpon>ASPF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPFApproval_Detail.aspx.cs">
+      <DependentUpon>ASPFApproval_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPFApproval_Detail.aspx.designer.cs">
+      <DependentUpon>ASPFApproval_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPFA_Detail_Revise.aspx.cs">
+      <DependentUpon>ASPFA_Detail_Revise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPFA_Detail_Revise.aspx.designer.cs">
+      <DependentUpon>ASPFA_Detail_Revise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPFController.aspx.cs">
+      <DependentUpon>ASPFController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPFController.aspx.designer.cs">
+      <DependentUpon>ASPFController.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPFDetail.aspx.cs">
+      <DependentUpon>ASPFDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPFDetail.aspx.designer.cs">
+      <DependentUpon>ASPFDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPFRevise.aspx.cs">
+      <DependentUpon>ASPFRevise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPFRevise.aspx.designer.cs">
+      <DependentUpon>ASPFRevise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ASPF_Detail_ByIO.aspx.cs">
+      <DependentUpon>ASPF_Detail_ByIO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ASPF_Detail_ByIO.aspx.designer.cs">
+      <DependentUpon>ASPF_Detail_ByIO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoClose.aspx.cs">
+      <DependentUpon>AutoClose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoClose.aspx.designer.cs">
+      <DependentUpon>AutoClose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Autotranfer.aspx.cs">
+      <DependentUpon>Autotranfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Autotranfer.aspx.designer.cs">
+      <DependentUpon>Autotranfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutotranferList.aspx.cs">
+      <DependentUpon>AutotranferList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutotranferList.aspx.designer.cs">
+      <DependentUpon>AutotranferList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetChecking.aspx.cs">
+      <DependentUpon>BudgetChecking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BudgetChecking.aspx.designer.cs">
+      <DependentUpon>BudgetChecking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="changepass.aspx.cs">
+      <DependentUpon>changepass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="changepass.aspx.designer.cs">
+      <DependentUpon>changepass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckingOnline.aspx.cs">
+      <DependentUpon>CheckingOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckingOnline.aspx.designer.cs">
+      <DependentUpon>CheckingOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimExpenses.aspx.cs">
+      <DependentUpon>ClaimExpenses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimExpenses.aspx.designer.cs">
+      <DependentUpon>ClaimExpenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clss\Cclass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clss\CContract.cs" />
+    <Compile Include="clss\clsControl.cs" />
+    <Compile Include="clss\clsDB.cs" />
+    <Compile Include="clss\clsLang.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clss\clsObj.cs" />
+    <Compile Include="clss\clsPhanQuyen.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clss\clsSql.cs" />
+    <Compile Include="clss\clsSys.cs" />
+    <Compile Include="ClaimExpensesOffice.aspx.cs">
+      <DependentUpon>ClaimExpensesOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimExpensesOffice.aspx.designer.cs">
+      <DependentUpon>ClaimExpensesOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimExpensesOfficeBK.aspx.cs">
+      <DependentUpon>ClaimExpensesOfficeBK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimExpensesOfficeBK.aspx.designer.cs">
+      <DependentUpon>ClaimExpensesOfficeBK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="approvedTravelRequest.aspx.cs">
+      <DependentUpon>approvedTravelRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="approvedTravelRequest.aspx.designer.cs">
+      <DependentUpon>approvedTravelRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clss\LDAPHelper.cs" />
+    <Compile Include="contract.aspx.cs">
+      <DependentUpon>contract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contract.aspx.designer.cs">
+      <DependentUpon>contract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractReport.aspx.cs">
+      <DependentUpon>ContractReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractReport.aspx.designer.cs">
+      <DependentUpon>ContractReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimExpensesSales.aspx.cs">
+      <DependentUpon>ClaimExpensesSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimExpensesSales.aspx.designer.cs">
+      <DependentUpon>ClaimExpensesSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimSalesExportSAP.aspx.cs">
+      <DependentUpon>ClaimSalesExportSAP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimSalesExportSAP.aspx.designer.cs">
+      <DependentUpon>ClaimSalesExportSAP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimSalesExportTotal.aspx.cs">
+      <DependentUpon>ClaimSalesExportTotal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimSalesExportTotal.aspx.designer.cs">
+      <DependentUpon>ClaimSalesExportTotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveColecWK.aspx.cs">
+      <DependentUpon>ApproveColecWK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveColecWK.aspx.designer.cs">
+      <DependentUpon>ApproveColecWK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TR_EC_Tracking.aspx.cs">
+      <DependentUpon>TR_EC_Tracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TR_EC_Tracking.aspx.designer.cs">
+      <DependentUpon>TR_EC_Tracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewEmployee1.aspx.cs">
+      <DependentUpon>NewEmployee1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewEmployee1.aspx.designer.cs">
+      <DependentUpon>NewEmployee1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucNewEmployee.ascx.cs">
+      <DependentUpon>ucNewEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucNewEmployee.ascx.designer.cs">
+      <DependentUpon>ucNewEmployee.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="vendoradmin.aspx.cs">
+      <DependentUpon>vendoradmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendoradmin.aspx.designer.cs">
+      <DependentUpon>vendoradmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportIPPR.aspx.cs">
+      <DependentUpon>ReportIPPR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportIPPR.aspx.designer.cs">
+      <DependentUpon>ReportIPPR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPChonNCC.aspx.cs">
+      <DependentUpon>IPChonNCC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IPChonNCC.aspx.designer.cs">
+      <DependentUpon>IPChonNCC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPPurRequest.aspx.cs">
+      <DependentUpon>IPPurRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IPPurRequest.aspx.designer.cs">
+      <DependentUpon>IPPurRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPMaterials.aspx.cs">
+      <DependentUpon>IPMaterials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IPMaterials.aspx.designer.cs">
+      <DependentUpon>IPMaterials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPVendorMaterial.aspx.cs">
+      <DependentUpon>IPVendorMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IPVendorMaterial.aspx.designer.cs">
+      <DependentUpon>IPVendorMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IPVendors.aspx.cs">
+      <DependentUpon>IPVendors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IPVendors.aspx.designer.cs">
+      <DependentUpon>IPVendors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ip_ipinput.aspx.cs">
+      <DependentUpon>ip_ipinput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ip_ipinput.aspx.designer.cs">
+      <DependentUpon>ip_ipinput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IP_NCCInput.aspx.cs">
+      <DependentUpon>IP_NCCInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IP_NCCInput.aspx.designer.cs">
+      <DependentUpon>IP_NCCInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportClaimSales.aspx.cs">
+      <DependentUpon>ReportClaimSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportClaimSales.aspx.designer.cs">
+      <DependentUpon>ReportClaimSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWorkingPlan.aspx.cs">
+      <DependentUpon>ReportWorkingPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportWorkingPlan.aspx.designer.cs">
+      <DependentUpon>ReportWorkingPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTravelRequestSales.aspx.cs">
+      <DependentUpon>PrintTravelRequestSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintTravelRequestSales.aspx.designer.cs">
+      <DependentUpon>PrintTravelRequestSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintClaimSales.aspx.cs">
+      <DependentUpon>PrintClaimSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintClaimSales.aspx.designer.cs">
+      <DependentUpon>PrintClaimSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewPosition.aspx.cs">
+      <DependentUpon>NewPosition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPosition.aspx.designer.cs">
+      <DependentUpon>NewPosition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewEmployee.aspx.cs">
+      <DependentUpon>NewEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewEmployee.aspx.designer.cs">
+      <DependentUpon>NewEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransferBudget.aspx.cs">
+      <DependentUpon>TransferBudget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransferBudget.aspx.designer.cs">
+      <DependentUpon>TransferBudget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelRequestSales.aspx.cs">
+      <DependentUpon>TravelRequestSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelRequestSales.aspx.designer.cs">
+      <DependentUpon>TravelRequestSales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportASPF.aspx.cs">
+      <DependentUpon>ExportASPF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportASPF.aspx.designer.cs">
+      <DependentUpon>ExportASPF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LegalUpload.aspx.cs">
+      <DependentUpon>LegalUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LegalUpload.aspx.designer.cs">
+      <DependentUpon>LegalUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpLoadLegal.aspx.cs">
+      <DependentUpon>PopUpLoadLegal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUpLoadLegal.aspx.designer.cs">
+      <DependentUpon>PopUpLoadLegal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintContractAdviceNote.aspx.cs">
+      <DependentUpon>PrintContractAdviceNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintContractAdviceNote.aspx.designer.cs">
+      <DependentUpon>PrintContractAdviceNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="org.aspx.cs">
+      <DependentUpon>org.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="org.aspx.designer.cs">
+      <DependentUpon>org.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DocDefault.aspx.cs">
+      <DependentUpon>DocDefault.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DocDefault.aspx.designer.cs">
+      <DependentUpon>DocDefault.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loi.aspx.cs">
+      <DependentUpon>Loi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loi.aspx.designer.cs">
+      <DependentUpon>Loi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pdfshow.ashx.cs">
+      <DependentUpon>pdfshow.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PhanQuyen.aspx.cs">
+      <DependentUpon>PhanQuyen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhanQuyen.aspx.designer.cs">
+      <DependentUpon>PhanQuyen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="policy.aspx.cs">
+      <DependentUpon>policy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="policy.aspx.designer.cs">
+      <DependentUpon>policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintAdvanceRequest.aspx.cs">
+      <DependentUpon>PrintAdvanceRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintAdvanceRequest.aspx.designer.cs">
+      <DependentUpon>PrintAdvanceRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintASPF.aspx.cs">
+      <DependentUpon>PrintASPF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintASPF.aspx.designer.cs">
+      <DependentUpon>PrintASPF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintTravelRequest.aspx.cs">
+      <DependentUpon>PrintTravelRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintTravelRequest.aspx.designer.cs">
+      <DependentUpon>PrintTravelRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderASPNo.aspx.cs">
+      <DependentUpon>ProviderASPNo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProviderASPNo.aspx.designer.cs">
+      <DependentUpon>ProviderASPNo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RejectOnline.aspx.cs">
+      <DependentUpon>RejectOnline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RejectOnline.aspx.designer.cs">
+      <DependentUpon>RejectOnline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="resetpass.aspx.cs">
+      <DependentUpon>resetpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="resetpass.aspx.designer.cs">
+      <DependentUpon>resetpass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TravelRequest.aspx.cs">
+      <DependentUpon>TravelRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TravelRequest.aspx.designer.cs">
+      <DependentUpon>TravelRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintClaimOfficeBK.aspx.cs">
+      <DependentUpon>PrintClaimOfficeBK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintClaimOfficeBK.aspx.designer.cs">
+      <DependentUpon>PrintClaimOfficeBK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintClaimOffice.aspx.cs">
+      <DependentUpon>PrintClaimOffice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintClaimOffice.aspx.designer.cs">
+      <DependentUpon>PrintClaimOffice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBStore.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBStore.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBTable.cs">
+      <DependentUpon>DBTable.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBTable.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBTable.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Department.aspx.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Department.aspx.designer.cs">
+      <DependentUpon>Department.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clss\PrintHelper.cs" />
+    <Compile Include="popVAT.aspx.cs">
+      <DependentUpon>popVAT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="popVAT.aspx.designer.cs">
+      <DependentUpon>popVAT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrintClaim.aspx.cs">
+      <DependentUpon>PrintClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrintClaim.aspx.designer.cs">
+      <DependentUpon>PrintClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ASPFApproval.ascx.cs">
+      <DependentUpon>ASPFApproval.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ASPFApproval.ascx.designer.cs">
+      <DependentUpon>ASPFApproval.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ASPFApproval_Revise.ascx.cs">
+      <DependentUpon>ASPFApproval_Revise.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ASPFApproval_Revise.ascx.designer.cs">
+      <DependentUpon>ASPFApproval_Revise.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ASPFBugetChecking.ascx.cs">
+      <DependentUpon>ASPFBugetChecking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ASPFBugetChecking.ascx.designer.cs">
+      <DependentUpon>ASPFBugetChecking.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ASPFBugetCheckin_IO.ascx.cs">
+      <DependentUpon>ASPFBugetCheckin_IO.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ASPFBugetCheckin_IO.ascx.designer.cs">
+      <DependentUpon>ASPFBugetCheckin_IO.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ASPFDetail.ascx.cs">
+      <DependentUpon>ASPFDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ASPFDetail.ascx.designer.cs">
+      <DependentUpon>ASPFDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ASPFRevise.ascx.cs">
+      <DependentUpon>ASPFRevise.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ASPFRevise.ascx.designer.cs">
+      <DependentUpon>ASPFRevise.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\InsertIPRequest.ascx.cs">
+      <DependentUpon>InsertIPRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\InsertIPRequest.ascx.designer.cs">
+      <DependentUpon>InsertIPRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ip_ipinput.ascx.cs">
+      <DependentUpon>ip_ipinput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ip_ipinput.ascx.designer.cs">
+      <DependentUpon>ip_ipinput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UC_IP_NCCInput.ascx.cs">
+      <DependentUpon>UC_IP_NCCInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UC_IP_NCCInput.ascx.designer.cs">
+      <DependentUpon>UC_IP_NCCInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UpdateIPChonNCC.ascx.cs">
+      <DependentUpon>UpdateIPChonNCC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UpdateIPChonNCC.ascx.designer.cs">
+      <DependentUpon>UpdateIPChonNCC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UpdateIPRequest.ascx.cs">
+      <DependentUpon>UpdateIPRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UpdateIPRequest.ascx.designer.cs">
+      <DependentUpon>UpdateIPRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\CreateASPF.ascx.cs">
+      <DependentUpon>CreateASPF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\CreateASPF.ascx.designer.cs">
+      <DependentUpon>CreateASPF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\InsertIPVendorMaterial.ascx.cs">
+      <DependentUpon>InsertIPVendorMaterial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\InsertIPVendorMaterial.ascx.designer.cs">
+      <DependentUpon>InsertIPVendorMaterial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ISIPMaterials.ascx.cs">
+      <DependentUpon>ISIPMaterials.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ISIPMaterials.ascx.designer.cs">
+      <DependentUpon>ISIPMaterials.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ISIPVendors.ascx.cs">
+      <DependentUpon>ISIPVendors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ISIPVendors.ascx.designer.cs">
+      <DependentUpon>ISIPVendors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucChangepass.ascx.cs">
+      <DependentUpon>ucChangepass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucChangepass.ascx.designer.cs">
+      <DependentUpon>ucChangepass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucResetPass.ascx.cs">
+      <DependentUpon>ucResetPass.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucResetPass.ascx.designer.cs">
+      <DependentUpon>ucResetPass.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucViewStatus.ascx.cs">
+      <DependentUpon>ucViewStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucViewStatus.ascx.designer.cs">
+      <DependentUpon>ucViewStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucVendor.ascx.cs">
+      <DependentUpon>ucVendor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucVendor.ascx.designer.cs">
+      <DependentUpon>ucVendor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucCurr.ascx.cs">
+      <DependentUpon>ucCurr.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucCurr.ascx.designer.cs">
+      <DependentUpon>ucCurr.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\InsertDMQuyen.ascx.cs">
+      <DependentUpon>InsertDMQuyen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\InsertDMSITE.ascx.cs">
+      <DependentUpon>InsertDMSITE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\menu.ascx.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucComboAdvance.ascx.cs">
+      <DependentUpon>ucComboAdvance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucComboAdvance.ascx.designer.cs">
+      <DependentUpon>ucComboAdvance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucComboDepartment.ascx.cs">
+      <DependentUpon>ucComboDepartment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucComboDepartment.ascx.designer.cs">
+      <DependentUpon>ucComboDepartment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucComboCharges.ascx.cs">
+      <DependentUpon>ucComboCharges.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucComboCharges.ascx.designer.cs">
+      <DependentUpon>ucComboCharges.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucCurrence.ascx.cs">
+      <DependentUpon>ucCurrence.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucCurrence.ascx.designer.cs">
+      <DependentUpon>ucCurrence.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucMsgBox.ascx.cs">
+      <DependentUpon>ucMsgBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucMsgBox.ascx.designer.cs">
+      <DependentUpon>ucMsgBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\ucUploadimage.ascx.cs">
+      <DependentUpon>ucUploadimage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ucUploadimage.ascx.designer.cs">
+      <DependentUpon>ucUploadimage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UpdateDMQuyen.ascx.cs">
+      <DependentUpon>UpdateDMQuyen.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UpdateDMSITE.ascx.cs">
+      <DependentUpon>UpdateDMSITE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UpdateIPVendorMaterial.ascx.cs">
+      <DependentUpon>UpdateIPVendorMaterial.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UpdateIPVendorMaterial.ascx.designer.cs">
+      <DependentUpon>UpdateIPVendorMaterial.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UPIPMaterials.ascx.cs">
+      <DependentUpon>UPIPMaterials.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UPIPMaterials.ascx.designer.cs">
+      <DependentUpon>UPIPMaterials.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="uc\UPIPVendors.ascx.cs">
+      <DependentUpon>UPIPVendors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\UPIPVendors.ascx.designer.cs">
+      <DependentUpon>UPIPVendors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadASPF.aspx.cs">
+      <DependentUpon>UploadASPF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadASPF.aspx.designer.cs">
+      <DependentUpon>UploadASPF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendor.aspx.cs">
+      <DependentUpon>vendor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendor.aspx.designer.cs">
+      <DependentUpon>vendor.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ImagesUpload\" />
+    <Folder Include="Policy\Advance\" />
+    <Folder Include="Policy\ASP\" />
+    <Folder Include="Policy\Expense\" />
+    <Folder Include="Policy\Travel\" />
+    <Folder Include="Upload\CO\" />
+    <Folder Include="Upload\DI\" />
+    <Folder Include="Upload\DO\" />
+    <Folder Include="Upload\EC\" />
+    <Folder Include="Upload\IP\" />
+    <Folder Include="Upload\TR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Copy of Web.config.bak">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Copy of Web.config.Debug.bak">
+      <DependentUpon>Copy of Web.config.bak</DependentUpon>
+    </None>
+    <None Include="Copy of Web.config.Release.bak">
+      <DependentUpon>Copy of Web.config.bak</DependentUpon>
+    </None>
+    <None Include="DB\DBStore.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBStore.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\DBTable.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBTable.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="pdfshow.ashx" />
+    <None Include="Policy\Contract\ICP-MIS-Software Development and Maitenance Management Policy.pdf" />
+    <None Include="Policy\Contract\R-678R%28W%29.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB\DBTable.dbml.layout">
+      <DependentUpon>DBTable.dbml</DependentUpon>
+    </None>
+    <None Include="DB\DBStore.dbml.layout">
+      <DependentUpon>DBStore.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="App_GlobalResources\en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\vi.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57698</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:18081/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

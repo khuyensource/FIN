@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="allwow" xml:space="preserve">
+    <value>ALL WOW (RECEIVED)</value>
+  </data>
+  <data name="ltdecline" xml:space="preserve">
+    <value>Decline</value>
+  </data>
+  <data name="ltdenied" xml:space="preserve">
+    <value>Denied</value>
+  </data>
+  <data name="emailerror" xml:space="preserve">
+    <value>Email is not valid! Please enter the company email address ended with @icpvn.com, @beaute-cos.com, @tpfood.com.vn, @maricoindia.net</value>
+  </data>
+  <data name="emailexists" xml:space="preserve">
+    <value>Email already exists, Please choose another email</value>
+  </data>
+  <data name="ltgiven" xml:space="preserve">
+    <value>Given</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>You must login</value>
+  </data>
+  <data name="loginerror" xml:space="preserve">
+    <value>Wrong Email or password, Please try again</value>
+  </data>
+  <data name="ltAutoRecivemail" xml:space="preserve">
+    <value>Receive email when have WoW</value>
+  </data>
+  <data name="ltAutoReciveWow" xml:space="preserve">
+    <value>Auto accept WoW</value>
+  </data>
+  <data name="ltavatar" xml:space="preserve">
+    <value>Avatar</value>
+  </data>
+  <data name="ltbirthday" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <data name="ltchangepass" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="ltchangepro" xml:space="preserve">
+    <value>My Settings</value>
+  </data>
+  <data name="ltcurentpass" xml:space="preserve">
+    <value>Curent password</value>
+  </data>
+  <data name="ltdepartment" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="ltlevel" xml:space="preserve">
+    <value>Config Level</value>
+  </data>
+  <data name="ltlogout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="ltmysetting" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="ltnewpass" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="ltpass" xml:space="preserve">
+    <value>Password login</value>
+  </data>
+  <data name="ltposition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="ltprofile" xml:space="preserve">
+    <value>&lt;br/&gt;My profile</value>
+  </data>
+  <data name="ltregEmail" xml:space="preserve">
+    <value>Email login (user login)</value>
+  </data>
+  <data name="ltregfullname" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="ltregis" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="ltreport" xml:space="preserve">
+    <value>Select Date</value>
+  </data>
+  <data name="ltretypepass" xml:space="preserve">
+    <value>Retype new password</value>
+  </data>
+  <data name="ltsetting" xml:space="preserve">
+    <value>&lt;br/&gt;Settings</value>
+  </data>
+  <data name="lttelephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="ltthismonth" xml:space="preserve">
+    <value>This month</value>
+  </data>
+  <data name="ltthisweek" xml:space="preserve">
+    <value>This week</value>
+  </data>
+  <data name="ltthisyear" xml:space="preserve">
+    <value>This year</value>
+  </data>
+  <data name="lttoday" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="nguoicho" xml:space="preserve">
+    <value>Given</value>
+  </data>
+  <data name="pass" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="passchangesucc" xml:space="preserve">
+    <value>Password changed success</value>
+  </data>
+  <data name="passempty" xml:space="preserve">
+    <value>Password do not empty</value>
+  </data>
+  <data name="passerror" xml:space="preserve">
+    <value>Wrong password</value>
+  </data>
+  <data name="ltreceived" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="regerror" xml:space="preserve">
+    <value>Registration user not successful</value>
+  </data>
+  <data name="regsucc" xml:space="preserve">
+    <value>Registration user successful, Please login to WoW</value>
+  </data>
+  <data name="retypepasserror" xml:space="preserve">
+    <value>Wrong retype password</value>
+  </data>
+  <data name="saveerror" xml:space="preserve">
+    <value>Save not success</value>
+  </data>
+  <data name="savesucc" xml:space="preserve">
+    <value>Save successfull</value>
+  </data>
+  <data name="searchwow" xml:space="preserve">
+    <value>SEARCH WoW (RECEIVED)</value>
+  </data>
+  <data name="whoexist" xml:space="preserve">
+    <value>That person doesn't exist</value>
+  </data>
+  <data name="whowow" xml:space="preserve">
+    <value>Who you wowing?</value>
+  </data>
+  <data name="wowcontent" xml:space="preserve">
+    <value>Content wow?</value>
+  </data>
+  <data name="wowdeclined" xml:space="preserve">
+    <value>WoW DECLINED (GIVEN)</value>
+  </data>
+  <data name="wowdened" xml:space="preserve">
+    <value>WoW DENIED (GIVEN)</value>
+  </data>
+  <data name="wowfor" xml:space="preserve">
+    <value>WoW FOR</value>
+  </data>
+  <data name="wowgiven" xml:space="preserve">
+    <value>WoW GIVEN (RECEIVED)</value>
+  </data>
+  <data name="wowreceive" xml:space="preserve">
+    <value>WoW RECEIVED (GIVEN)</value>
+  </data>
+  <data name="wowself" xml:space="preserve">
+    <value>You can't WoW yourself!</value>
+  </data>
+  <data name="wowthisweek" xml:space="preserve">
+    <value>WoW THIS WEEK (RECEIVED)</value>
+  </data>
+  <data name="wowtoday" xml:space="preserve">
+    <value>WoW TODAY (RECEIVED)</value>
+  </data>
+  <data name="lbtitletop5given" xml:space="preserve">
+    <value>Top 5 Given</value>
+  </data>
+  <data name="lbtitletop5received" xml:space="preserve">
+    <value>Top 5 Received</value>
+  </data>
+  <data name="updateprofilesucc" xml:space="preserve">
+    <value>Update user profile successful</value>
+  </data>
+  <data name="ltlike" xml:space="preserve">
+    <value>Liked</value>
+  </data>
+  <data name="btwow" xml:space="preserve">
+    <value>Give a WoW</value>
+  </data>
+  <data name="ltnewwow" xml:space="preserve">
+    <value>NEW WoW (GIVEN)</value>
+  </data>
+  <data name="lbliked" xml:space="preserve">
+    <value>Liked</value>
+  </data>
+  <data name="ltforgetpass" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="sendmailresetpass" xml:space="preserve">
+    <value>Pls check your email to reset password</value>
+  </data>
+  <data name="sendmailresetpasserror" xml:space="preserve">
+    <value>Can't send email to your email</value>
+  </data>
+  <data name="Champions" xml:space="preserve">
+    <value>&lt;br/&gt;Champions</value>
+  </data>
+  <data name="ltbestquo" xml:space="preserve">
+    <value>Best Quotes</value>
+  </data>
+  <data name="lthowdowork" xml:space="preserve">
+    <value>&lt;br/&gt;How WoW</value>
+  </data>
+  <data name="ltmbestwow" xml:space="preserve">
+    <value>&lt;br/&gt;Best WoW</value>
+  </data>
+  <data name="ltworkfactor" xml:space="preserve">
+    <value>WoW Factors</value>
+  </data>
+  <data name="ltworkhow" xml:space="preserve">
+    <value>WoW Hows</value>
+  </data>
+  <data name="ltworkrule" xml:space="preserve">
+    <value>WoW Rules</value>
+  </data>
+  <data name="ltwowbest" xml:space="preserve">
+    <value>WoW Best</value>
+  </data>
+  <data name="ltwowbestm" xml:space="preserve">
+    <value>WoW Liked</value>
+  </data>
+  <data name="ltwowtip" xml:space="preserve">
+    <value>WoW Pulse</value>
+  </data>
+  <data name="btNhietHuyet" xml:space="preserve">
+    <value>Energy</value>
+  </data>
+  <data name="btSangTao" xml:space="preserve">
+    <value>Innovation</value>
+  </data>
+  <data name="btTronVen" xml:space="preserve">
+    <value>Integrity</value>
+  </data>
+  <data name="btTrungThuc" xml:space="preserve">
+    <value>Respect</value>
+  </data>
+  <data name="btXuatSac" xml:space="preserve">
+    <value>Excellence</value>
+  </data>
+  <data name="erGTCL" xml:space="preserve">
+    <value>You must chonse GTCL</value>
+  </data>
+  <data name="ltlogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="ltuslevelup" xml:space="preserve">
+    <value>How far to level up</value>
+  </data>
+  <data name="ltusscore" xml:space="preserve">
+    <value>Score total</value>
+  </data>
+  <data name="ltfoot" xml:space="preserve">
+    <value>Please send feedback to IT Service Desk, email: servicedesk@icpvn.com, phone: 08.39976689</value>
+  </data>
+  <data name="ltumostlike" xml:space="preserve">
+    <value>Most liked</value>
+  </data>
+  <data name="top10wowlike" xml:space="preserve">
+    <value>TOP 10 WoW LIKED (GIVEN)</value>
+  </data>
+  <data name="lbfrom" xml:space="preserve">
+    <value>From month</value>
+  </data>
+  <data name="lbTo" xml:space="preserve">
+    <value>To month</value>
+  </data>
+  <data name="ltFirstUse" xml:space="preserve">
+    <value>&lt;strong&gt;FIRST TIME HELP&lt;/strong&gt;&lt;br/&gt;1. Click "Forgot Password"&lt;br/&gt;
+2. Enter your company email address, for example: yourname@icpvn.com&lt;br/&gt;
+3. Click “Reset Password” button&lt;br/&gt;
+4. Check your mailbox, Open email with subject “WoW!WeB Password reset request”, then Click the link to open WoW!WeB&lt;br/&gt;
+5. Type your new password and confirm password, click OK&lt;br/&gt;
+6.  Login WoW!WeB by your email and new password you have changed.
+Enjoy WOW!WEB&lt;br/&gt;if you need more help, please see more...
+                        &lt;a href="FirstUseWoW.pdf" target="newtab"&gt;Here&lt;/a&gt;</value>
+  </data>
+  <data name="btresetpass" xml:space="preserve">
+    <value>Your Email login WowWeb</value>
+  </data>
+  <data name="ltonline" xml:space="preserve">
+    <value>Online:</value>
+  </data>
+  <data name="ltvisit" xml:space="preserve">
+    <value>Visited:</value>
+  </data>
+  <data name="emailnotexists" xml:space="preserve">
+    <value>Your email do not exists in WoW!WeB system</value>
+  </data>
+  <data name="titleresetpass" xml:space="preserve">
+    <value>&lt;b&gt;Reset your password login WowWeb&lt;/b&gt;</value>
+  </data>
+  <data name="loginerrorMBR" xml:space="preserve">
+    <value>Your information do not create in MBR system, Please contact to HR</value>
+  </data>
+</root>

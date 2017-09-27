@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="FIN" Class="DBTableDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=172.17.0.88;Initial Catalog=FIN;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MPAYConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Charges" Member="Charges">
+    <Type Name="Charge">
+      <Column Name="Charges_PK" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[log]" Member="logs">
+    <Type Name="log">
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ipadd" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LanIP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Computername" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="userloginwindow" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="whenlog" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="statuskey" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Market" Member="Markets">
+    <Type Name="Market">
+      <Column Name="Market_PK" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="No" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Market_User" Member="Users" ThisKey="Market_PK" OtherKey="Market_FK" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DepartmentMPAY" Member="DepartmentMPAYs">
+    <Type Name="DepartmentMPAY">
+      <Column Name="Company_FK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CostCenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestTravel" Member="RequestTravels">
+    <Type Name="RequestTravel">
+      <Column Name="Code_PK" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Approver" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AppEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="NoteApprover" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Itenerary" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TelContact" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ByCar" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ByTrain" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ByPlane" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CarAriPort" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CarTravel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BookTicket" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BookHotel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Approved2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Approved3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ApprovedCode1" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ApprovedCode2" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ApprovedCode3" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="IsPayMent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Other" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DetailOther" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DPNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Approved4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ApprovedCode4" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DateSubmit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestTravelDetail" Member="RequestTravelDetails">
+    <Type Name="RequestTravelDetail">
+      <Column Name="Charges_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SoTien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonViTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cong" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IsTamUng" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Code_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Approve" Member="Approves">
+    <Type Name="Approve">
+      <Column Name="Docno" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Approval" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="LevelApp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateApp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ApprovedCode" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Vendors" Member="Vendors">
+    <Type Name="Vendor">
+      <Column Name="VendorCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VendorName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContractType" Member="ContractTypes">
+    <Type Name="ContractType">
+      <Column Name="Type_PK" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClaimExpenses" Member="ClaimExpenses">
+    <Type Name="ClaimExpense">
+      <Column Name="Code_PK" Type="System.String" DbType="VarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Approver" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="AppEmail" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="DaTamUng" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Tra_ThuChenhLech" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="DocTot" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NoteApprover" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ApprovedCode1" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ApprovedCode2" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ApprovedCode3" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ApprovedCode4" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="AdvanceDocNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Approved2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Approved3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateSubmit" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp1" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp2" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp3" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateApp4" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Approved4" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NguoiThuHuong" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="ClaimExpense_ClaimExpensesDetail" Member="ClaimExpensesDetails" ThisKey="Code_PK" OtherKey="Code_FK" Type="ClaimExpensesDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Username" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Fullname" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Department_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Market_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Position_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Recommender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Function_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsManager" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Area_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Level_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SignatureURL" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="Company_FK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TelPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SeniorManager" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Director" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="VP_HOF" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="COO" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Budget_Owner" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Market_User" Member="Market" ThisKey="Market_FK" OtherKey="Market_PK" Type="Market" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClaimExpensesDetail" Member="ClaimExpensesDetails">
+    <Type Name="ClaimExpensesDetail">
+      <Column Name="Code_FK" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="No" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Notation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Charges_FK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Currency" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TotalVN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="PictureURL" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="VATCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VATAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NoDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Purpose" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="GL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DetailExpenses" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Participant" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FileAttach" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="Costcenter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CurrencyDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="ClaimExpense_ClaimExpensesDetail" Member="ClaimExpense" ThisKey="Code_FK" OtherKey="Code_PK" Type="ClaimExpense" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RequestTravelDetailSales" Member="RequestTravelDetailSales">
+    <Type Name="RequestTravelDetailSale">
+      <Column Name="Code_FK" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PurposeMorning" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PurposeAfter" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DateRec" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
