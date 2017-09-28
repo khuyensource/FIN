@@ -1382,8 +1382,8 @@ namespace MaricoPay
             string nguoidenghi = txtName.Text;
             string phongban = comboDepartment1.Text;
             string mucdich = txtPurpose.Text;
-            string noiden = "";// txtNoiDen.Text;
-            string lotrinh = "";// txtLoTrinh.Text;
+           // string noiden = "";// txtNoiDen.Text;
+           // string lotrinh = "";// txtLoTrinh.Text;
             string thoigian = "Từ/From " + raddateFrom.SelectedDate.Value.ToString("dd-MMM-yy") + " Đến/To " + raddateTo.SelectedDate.Value.ToString("dd-MMM-yy");
             //string phuongtien = chkOto.Checked ? " Oto / Car " : "";
             //phuongtien = phuongtien + cls.cToString(chkTauHoa.Checked ? " Tàu hỏa / Train " : "");

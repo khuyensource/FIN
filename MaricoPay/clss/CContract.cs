@@ -579,7 +579,7 @@ using System.Threading;
         //    return kq;
         //}
      //   Them 20 Jan 2017
-       private Microsoft.Office.Interop.Word.ApplicationClass MSdoc;
+   //    private Microsoft.Office.Interop.Word.ApplicationClass MSdoc;
         object Unknown = Type.Missing;
         public string word2PDF(object Source, object Target)
         {   //Creating the instance of Word Application  

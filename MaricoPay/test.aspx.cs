@@ -79,7 +79,7 @@ namespace MaricoPay
              string strdoc = @"D:\Temp\aaa.doc";
              string strdocout = @"D:\Temp\aaaOut.doc";
             string img1 = @"D:\khuyen.tran.png";
-            string pass="legalonly";
+            //string pass="legalonly";
             ketquaSign kq = ct.AddSinagureFooterWord1(strdoc, img1, strdocout, 10, 0);
              TextBox1.Text=kq.noidung;
             //string kq=ct.UnLock(strdoc, pass, strdocout);
@@ -99,7 +99,7 @@ namespace MaricoPay
             string strdoc = @"D:\Temp\aaa.pdf";
             string strdocout = @"D:\Temp\aaaOut.pdf";
             string img1 = @"D:\khuyen.tran.png";
-            string pass = "legalonly";
+           // string pass = "legalonly";
             ketquaSign kq = ct.AddSinagureFooterPdf(strdoc, img1, strdocout, 10, 0);
             TextBox1.Text = kq.noidung;
         }

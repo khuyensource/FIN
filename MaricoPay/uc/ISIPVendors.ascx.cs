@@ -9,7 +9,7 @@ namespace MaricoPay.uc
 {
     public partial class ISIPVendors : System.Web.UI.UserControl
     {
-        clsObj Obj;
+     //   clsObj Obj;
         clsSql Sql = new clsSql();
         protected void Page_Load(object sender, EventArgs e)
         {

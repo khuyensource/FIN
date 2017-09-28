@@ -1397,7 +1397,7 @@ namespace MaricoPay.uc
          protected void btnSave_Click(object sender, EventArgs e)
          {
              Session["CreateASPF"] = "Update successfull";
-             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+         //    int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
              #region check after Update
              string filename = "";
              int result = DateTime.Compare(RddatetimeFrom.SelectedDate.Value, RddatetimeTo.SelectedDate.Value);
@@ -1836,7 +1836,7 @@ namespace MaricoPay.uc
 
          protected void btnSubmit_Click(object sender, EventArgs e)
          {
-             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+          //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
 
              Session["CreateASPF"] = "Update successfull";
              try

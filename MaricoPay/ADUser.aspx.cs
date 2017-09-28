@@ -26,7 +26,7 @@ namespace MaricoPay
         {
             
             string ldapdomain = ConfigurationManager.AppSettings["LDAPDomain"].ToString();// <add key="LDAPDomain" value="LDAP://172.17.0.250" />
-            bool trave = false;
+          //  bool trave = false;
             string domainuser = "MILCORP" + "\\" + username;
             DirectoryEntry entry = new DirectoryEntry(ldapdomain, domainuser, pwd);
 

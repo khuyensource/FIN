@@ -991,7 +991,7 @@ namespace MaricoPay.uc
         {
             Session["CreateASPF"] = "Update successfull"; 
             string filename = "";
-            int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+        //    int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
             if (FileUpload1.HasFile)
             {
                 try
@@ -1456,7 +1456,7 @@ namespace MaricoPay.uc
         {
 
             Session["CreateASPF"] = "Update successfull";
-            int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+         //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
             ///////////// -----------------
             try
             {

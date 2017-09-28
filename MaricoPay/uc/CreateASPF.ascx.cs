@@ -1306,7 +1306,7 @@ namespace MaricoPay.uc
          protected void btnSave_Click(object sender, EventArgs e)
          {
              string filename = "";
-             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+          //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
              if (FileUpload1.HasFile)
              {
                  try
@@ -1879,7 +1879,7 @@ namespace MaricoPay.uc
          protected void btnSubmit_Click(object sender, EventArgs e)
          {
 
-             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+          //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
             ///////////// -----------------
              try
              {

@@ -2433,8 +2433,8 @@ public class Cclass : System.Web.UI.Page
        // string nguoidenghi = txtName.Text;
        // string phongban = comboDepartment1.Text;
        // string mucdich = txtPurpose.Text;
-        string noiden = "";// txtNoiDen.Text;
-        string lotrinh = "";// txtLoTrinh.Text;
+      //  string noiden = "";// txtNoiDen.Text;
+       // string lotrinh = "";// txtLoTrinh.Text;
 
         string thoigian = "Từ/From " + TuNgay + " Đến/To " + DenNgay;
         //string phuongtien = chkOto.Checked ? " Oto / Car " : "";

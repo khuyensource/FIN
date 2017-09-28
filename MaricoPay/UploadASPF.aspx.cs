@@ -73,6 +73,7 @@ namespace MaricoPay
             }
             else
             {
+                xlsx = false;
                 //MyConnection = new OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0; Data Source='" + path + "';Extended Properties=Excel 8.0;");
                 MyConnection = new OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0; Data Source='" + path + "';Extended Properties=\"Excel 8.0; HDR=Yes; IMEX=1\";");
             }
