@@ -4,6 +4,7 @@
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort>44359</IISExpressSSLPort>
     <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
+    <NameOfLastUsedPublishProfile>Profile1</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
