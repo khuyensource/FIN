@@ -26,9 +26,9 @@
             return confirm("Bạn có chắc muốn gửi working plan đến cấp trên phê duyệt, sau khi gửi bạn không thể chỉnh sửa <br/>Are you sure to send to N1, you will not revise this WK");
         }
     </script>
-    <%--<telerik:RadScriptManager ID="RadScriptManager1" runat="server" />--%>
+  <%-- <telerik:RadScriptManager ID="RadScriptManager1" runat="server" />--%>
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
-        <AjaxSettings>
+       <%-- <AjaxSettings>
             <telerik:AjaxSetting AjaxControlID="btExpand1">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="lbTitle" UpdatePanelCssClass="" />
@@ -51,19 +51,19 @@
             <telerik:AjaxSetting AjaxControlID="btAdd">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" />
-                    <%--<telerik:AjaxUpdatedControl ControlID="btSave" UpdatePanelCssClass="" />--%>
+                 
                 </UpdatedControls>
             </telerik:AjaxSetting>
             <telerik:AjaxSetting AjaxControlID="uscSubmit">
                 <UpdatedControls>
-                    <%-- <telerik:AjaxUpdatedControl ControlID="btSubmit" UpdatePanelCssClass="" />--%>
+                
                     <telerik:AjaxUpdatedControl ControlID="RadGrid2" UpdatePanelCssClass="" />
                     <telerik:AjaxUpdatedControl ControlID="lbMess" UpdatePanelCssClass="" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
             <telerik:AjaxSetting AjaxControlID="UscApproved">
                 <UpdatedControls>
-                    <%-- <telerik:AjaxUpdatedControl ControlID="btSubmit" UpdatePanelCssClass="" />--%>
+                  
                     <telerik:AjaxUpdatedControl ControlID="RadGrid2" UpdatePanelCssClass="" />
                     <telerik:AjaxUpdatedControl ControlID="lbMess" UpdatePanelCssClass="" />
                 </UpdatedControls>
@@ -95,7 +95,7 @@
                     <telerik:AjaxUpdatedControl ControlID="droHuyenC" UpdatePanelCssClass="" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
-        </AjaxSettings>
+        </AjaxSettings>--%>
     </telerik:RadAjaxManager>
     <div style="width: 99%; float: left; overflow: auto; height: 840px;">
         <div>

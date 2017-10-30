@@ -41,6 +41,7 @@ namespace MaricoPay
                 Response.Redirect("~/Login.aspx");
             }
             Session["CreateASPF"] = null;
+           
         }
         private void LoadGird()
         {
@@ -49,6 +50,19 @@ namespace MaricoPay
             RadGrid2.DataBind();
         }
 
+        protected void RadGrid2_PageSizeChanged(object source, GridPageSizeChangedEventArgs e)
+        {
+
+            LoadGird();
+
+        }
+
+        protected void RadGrid2_PageIndexChanged(object source, GridPageChangedEventArgs e)
+        {
+
+            LoadGird();
+
+        }
         protected void RadGrid2_ItemDataBound(object sender, GridItemEventArgs e)
         {
             if (e.Item is GridDataItem)
@@ -118,6 +132,21 @@ namespace MaricoPay
 
                 LoadGird();
             }
+            if (e.CommandName == "Cancel")
+            {
+
+                LoadGird();
+            }
+            if (e.CommandName == "Page")
+            {
+
+                LoadGird();
+            }
+        }
+
+        protected void RadGrid2_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
+        {
+            LoadGird();
         }
 
     }

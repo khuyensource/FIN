@@ -463,6 +463,8 @@ namespace MaricoPay
             DataTable tbltinh = cls.GetDataTable("sp_getTinh");
             droTinhS.DataSource = tbltinh;
             droTinhS.DataBind();
+            CacheHelper.Set("cTinhThanh", tbltinh);
+            
         }
         private void LoadHuyenS(int MaTP)
         {

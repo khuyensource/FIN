@@ -15,8 +15,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Collections;
 using System.Net.Mail;
-
-
+using System.Web.Caching;
 
 public class Cclass : System.Web.UI.Page
 {
@@ -1005,14 +1004,17 @@ public class Cclass : System.Web.UI.Page
     public string cToString(object str)
     {
         string kq = "";
-        try
+        //try
+        //{
+        if (str != null)
         {
             kq = str.ToString().Replace("&nbsp;", "");
         }
-        catch
-        {
-            kq = "";
-        }
+        //}
+        //catch
+        //{
+        //    kq = "";
+        //}
         return kq;
     }
     /// <summary>
@@ -1024,7 +1026,7 @@ public class Cclass : System.Web.UI.Page
     public string cToString(object str,string kqsai)
     {
         string kq = "";
-        try
+        if (str != null)
         {
             kq = str.ToString();
             if (kq.Trim() == "")
@@ -1032,7 +1034,7 @@ public class Cclass : System.Web.UI.Page
                 kq = kqsai;
             }
         }
-        catch
+        else
         {
             kq = kqsai;
         }
@@ -1041,15 +1043,15 @@ public class Cclass : System.Web.UI.Page
     public string cToString0(object str)
     {
         string kq = "0";
-        try
+        if (str != null)
         {
             kq = str.ToString().Replace(",","");
             
         }
-        catch
-        {
-            kq = "0";
-        }
+        //catch
+        //{
+        //    kq = "0";
+        //}
         return kq;
     }
     public double cToNum(object no)
@@ -2782,6 +2784,53 @@ public struct ketquaSign
     {
         bketqua = p1;
         noidung = p2;
+    }
+}
+public class CacheHelper
+{
+    public static object Get(string key)
+    {
+        return HttpContext.Current == null ? null : HttpContext.Current.Cache[key];
+    }
+
+    public static void Remove(string key)
+    {
+        HttpContext.Current.Cache.Remove(key);
+    }
+
+    public static void Set(string key, object value)
+    {
+        HttpContext.Current.Cache.Insert(key, value, null,
+                                         DateTime.Now.AddMinutes(30),
+                                         TimeSpan.Zero,
+                                         CacheItemPriority.Default, null
+            );
+    }
+
+    public static void Set(string key, object value, int minutes)
+    {
+        HttpContext.Current.Cache.Insert(key, value, null,
+                                         DateTime.Now.AddMinutes(minutes),
+                                         TimeSpan.Zero,
+                                         CacheItemPriority.Default, null
+            );
+    }
+    public static void SetSeconds(string key, object value, int seconds)
+    {
+        HttpContext.Current.Cache.Insert(key, value, null,
+                                         DateTime.Now.AddSeconds(seconds),
+                                         TimeSpan.Zero,
+                                         CacheItemPriority.Default, null
+            );
+    }
+
+    public static void Set(string key, object value, int minutes, CacheDependency dependence)
+    {
+        HttpContext.Current.Cache.Insert(key, value, dependence,
+                                         DateTime.Now.AddMinutes(minutes),
+                                         TimeSpan.Zero,
+                                         CacheItemPriority.Default, null
+            );
     }
 }
 

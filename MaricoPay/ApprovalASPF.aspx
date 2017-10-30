@@ -45,11 +45,11 @@
 
 
     </br>
-        </br>
-    <telerik:RadGrid ID="RadGrid2" Skin="Default" runat="server" AutoGenerateColumns="False" AllowSorting="true"
-        AllowFilteringByColumn="True" AutoPostBackOnFilter="true" CurrentFilterFunction="Contains"
-        GridLines="Horizontal" OnItemDataBound="RadGrid2_ItemDataBound" OnItemCommand="RadGrid2_ItemCommand">
-        <MasterTableView DataKeyNames="ID" AutoGenerateColumns="false" AllowFilteringByColumn="True">
+       
+    <telerik:RadGrid ID="RadGrid2" Skin="Default" runat="server" AutoGenerateColumns="False"   PageSize="20" AllowPaging="true"  AllowSorting="True"  OnPageIndexChanged="RadGrid2_PageIndexChanged" AllowCustomPaging="False"
+        AllowFilteringByColumn="True" AutoPostBackOnFilter="true" CurrentFilterFunction="Contains"   OnPageSizeChanged="RadGrid2_PageSizeChanged" EnableViewState="True"  EnableEventValidation="False" 
+        GridLines="Horizontal" OnItemDataBound="RadGrid2_ItemDataBound" OnItemCommand="RadGrid2_ItemCommand" >  
+        <MasterTableView DataKeyNames="ID" AutoGenerateColumns="false" AllowFilteringByColumn="True"    >
 
             <Columns>
 

@@ -36,7 +36,7 @@ namespace MaricoPay.uc
                 Load_Channel();
 
                 LoadData();
-                loadbudget();
+               // loadbudget();
 
             }
             calculateQuater(int.Parse(RddatetimeFrom.SelectedDate.Value.Month.ToString()), int.Parse(RddatetimeTo.SelectedDate.Value.Month.ToString()));
@@ -315,11 +315,11 @@ namespace MaricoPay.uc
                 //  Loadregion(rdChannel.SelectedValue);
                 //   rdRegion.SelectedValue = tbl.Rows[0]["region"].ToString();
 
-                loadHistory();
+             
 
             }
 
-
+            loadHistory();
         }
 
        

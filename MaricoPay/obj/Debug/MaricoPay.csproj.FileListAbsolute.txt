@@ -72,9 +72,11 @@ D:\Google Drive\GifHub\FIN\MaricoPay\bin\itextsharp.xml
 D:\Google Drive\GifHub\FIN\MaricoPay\bin\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
 D:\Google Drive\GifHub\FIN\MaricoPay\bin\Microsoft.Office.Interop.Word.xml
 D:\Google Drive\GifHub\FIN\MaricoPay\bin\office.xml
-D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.csprojResolveAssemblyReference.cache
 D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.App_GlobalResources.en.resources
 D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.App_GlobalResources.vi.resources
 D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.csproj.GenerateResource.Cache
 D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.dll
 D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.pdb
+D:\Google Drive\GifHub\FIN\MaricoPay\bin\MaricoPay.dll.CodeAnalysisLog.xml
+D:\Google Drive\GifHub\FIN\MaricoPay\bin\MaricoPay.dll.lastcodeanalysissucceeded
+D:\Google Drive\GifHub\FIN\MaricoPay\obj\Debug\MaricoPay.csprojResolveAssemblyReference.cache

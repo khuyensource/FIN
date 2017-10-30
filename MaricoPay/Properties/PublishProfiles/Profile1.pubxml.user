@@ -5,7 +5,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <TimeStampOfAssociatedLegacyPublishXmlFile>2017-09-18T15:14:34.1792697+07:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2017-09-18T15:14:34.0000000+07:00</TimeStampOfAssociatedLegacyPublishXmlFile>
     <_PublishTargetUrl>D:\Pulish\FIN</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/24/2017 17:26:05</publishTime>
     </File>
     <File Include="ApprovalASPF.aspx">
-      <publishTime>03/21/2017 11:16:41</publishTime>
+      <publishTime>10/18/2017 14:28:30</publishTime>
     </File>
     <File Include="ApprovalOnline.aspx">
       <publishTime>05/10/2017 14:48:25</publishTime>
@@ -88,7 +88,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/30/2017 10:22:37</publishTime>
     </File>
     <File Include="bin/MaricoPay.dll">
-      <publishTime>10/03/2017 22:23:52</publishTime>
+      <publishTime>10/25/2017 17:21:12</publishTime>
+    </File>
+    <File Include="bin/MaricoPay.pdb">
+      <publishTime>10/25/2017 17:21:12</publishTime>
     </File>
     <File Include="bin/Microsoft.CSharp.dll">
       <publishTime>03/18/2010 19:31:26</publishTime>
@@ -100,16 +103,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/20/2016 15:49:27</publishTime>
     </File>
     <File Include="bin/Microsoft.Office.Interop.Word.dll">
-      <publishTime>01/18/2011 18:27:04</publishTime>
+      <publishTime>05/26/2015 13:37:34</publishTime>
     </File>
     <File Include="bin/Microsoft.Vbe.Interop.dll">
-      <publishTime>01/18/2011 18:27:04</publishTime>
+      <publishTime>05/26/2015 13:37:34</publishTime>
     </File>
     <File Include="bin/office.dll">
-      <publishTime>01/18/2011 18:27:04</publishTime>
+      <publishTime>05/26/2015 13:37:34</publishTime>
     </File>
     <File Include="bin/stdole.dll">
-      <publishTime>02/19/2011 23:39:42</publishTime>
+      <publishTime>05/26/2015 13:37:34</publishTime>
     </File>
     <File Include="bin/System.Configuration.dll">
       <publishTime>03/18/2010 19:31:26</publishTime>
@@ -469,7 +472,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/10/2017 14:50:45</publishTime>
     </File>
     <File Include="uc/ASPFDetail.ascx">
-      <publishTime>05/10/2017 14:50:46</publishTime>
+      <publishTime>10/23/2017 08:30:35</publishTime>
     </File>
     <File Include="uc/ASPFRevise.ascx">
       <publishTime>12/19/2016 11:59:36</publishTime>
@@ -574,7 +577,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/21/2017 11:14:06</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/03/2017 22:37:41</publishTime>
+      <publishTime>10/19/2017 17:36:14</publishTime>
     </File>
   </ItemGroup>
 </Project>

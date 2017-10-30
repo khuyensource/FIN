@@ -1136,7 +1136,7 @@ namespace MaricoPay
                                 else
                                 {
                                     #region Legal Pdf
-                                    if (cls.getExtention(filenameup1).ToLower().IndexOf("pdfxxx") >= 0)
+                                    if (cls.getExtention(filenameup1).ToLower().IndexOf("pdf") >= 0)//cho nay add chu ky vao pdf
                                     {
                                         string orgfilepath = Server.MapPath("Upload/CO/" + filenameup1);
 
@@ -1295,7 +1295,7 @@ namespace MaricoPay
                                                 else
                                                 {
                                                     #region Legal zip pdf
-                                                    if (cls.getExtention(fileName).ToLower().IndexOf("pdfxxx") >= 0)
+                                                    if (cls.getExtention(fileName).ToLower().IndexOf("pdf") >= 0)
                                                     {
                                                         string orgfilepath1 = Server.MapPath("Upload/CO/" + foldername + "/" + cls.getFileName(fileName));
                                                         string chuky = Server.MapPath("ImagesSignature/" + cls.cToString(Session["username"]) + ".png");
@@ -1624,7 +1624,7 @@ namespace MaricoPay
                                             else
                                             {
                                                 #region Zip pdf
-                                                if (cls.getExtention(fileName).ToLower().IndexOf("pdfxxx") >= 0)
+                                                if (cls.getExtention(fileName).ToLower().IndexOf("pdf") >= 0)
                                                 {
                                                     string orgfilepath1 = Server.MapPath("Upload/CO/" + foldername + "/" + cls.getFileName(fileName));
                                                     string chuky = Server.MapPath("ImagesSignature/" + cls.cToString(Session["username"]) + ".png");
@@ -1714,7 +1714,7 @@ namespace MaricoPay
                                     else//file upload ko phai la file doc, cung ko phai la file zíp
                                     {
                                         #region Finance pdf
-                                        if (cls.getExtention(filenameup1).ToLower().IndexOf("pdfxxx") >= 0)//neu la file pdf
+                                        if (cls.getExtention(filenameup1).ToLower().IndexOf("pdf") >= 0)//neu la file pdf
                                         {
                                             string orgfilepath = Server.MapPath("Upload/CO/" + filenameup1);
                                             string chuky = Server.MapPath("ImagesSignature/" + cls.cToString(Session["username"]) + ".png");

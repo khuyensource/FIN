@@ -46,7 +46,7 @@ namespace MaricoPay.uc
               
                
             }
-          //  ShowEmptyGrid(2);
+           // ShowEmptyGrid(5);
             calculateQuater(int.Parse(RddatetimeFrom.SelectedDate.Value.Month.ToString()), int.Parse(RddatetimeTo.SelectedDate.Value.Month.ToString()));
 
         }
@@ -331,23 +331,63 @@ namespace MaricoPay.uc
                 dtdetail.Columns.Add("Code");
                 dtdetail.Columns.Add("ID");
 
-                dtdetail.Columns.Add("Description");
+              
                 dtdetail.Columns.Add("Nhanhang_fk");
                 dtdetail.Columns.Add("Category_FK");
                 dtdetail.Columns.Add("AmountQ1");
                  dtdetail.Columns.Add("AmountQ2");
                  dtdetail.Columns.Add("AmountQ3");
                  dtdetail.Columns.Add("AmountQ4");
+                 dtdetail.Columns.Add("IOnumber");
 
+                 dtdetail.Columns.Add("Region");
+                 dtdetail.Columns.Add("AccountCoding");
+              
 
-                for (int i = 0; i < rows; i++)
+                  dtdetail.Columns.Add("Description");
+                 dtdetail.Columns.Add("Nhanhang_fk_Tang");
+                 dtdetail.Columns.Add("Category_FK_Tang");
+                 dtdetail.Columns.Add("Amount");
+
+                 dtdetail.Columns.Add("M1");
+                 dtdetail.Columns.Add("M2");
+                 dtdetail.Columns.Add("M3");
+                 dtdetail.Columns.Add("M4");
+                 dtdetail.Columns.Add("M5");
+                 dtdetail.Columns.Add("M6");
+                 dtdetail.Columns.Add("M7");
+
+                 dtdetail.Columns.Add("M8");
+                 dtdetail.Columns.Add("M9");
+                 dtdetail.Columns.Add("M10");
+                 dtdetail.Columns.Add("M11");
+                 dtdetail.Columns.Add("M12");
+                
+              //   dtdetail.Columns.Add("Category_FK");
+
+                             
+
+               if (ViewState["Data"] !=null)
                 {
-                    dtdetail = addNewRow(dtdetail);
+                    dtdetail = (DataTable)ViewState["Data"];
+                    
+                    for (int i = 0; i < rows; i++)
+                    {
+                        DataRow drNewRow = dtdetail.NewRow();
+                        dtdetail.Rows.Add(drNewRow);
+                        dtdetail.AcceptChanges();
+                    }
+
+                }
+                else
+                {
+                    ViewState["Data"] = dtdetail;
                 }
 
-                ViewState["Data"] = dtdetail;
-                RGKienThuc.DataSource = dtdetail;
+              //  ViewState["Data"] = dtdetail;
+                RGKienThuc.DataSource = ViewState["Data"];
                 RGKienThuc.DataBind();
+                
 
 
             }
@@ -1397,7 +1437,7 @@ namespace MaricoPay.uc
          protected void btnSave_Click(object sender, EventArgs e)
          {
              Session["CreateASPF"] = "Update successfull";
-         //    int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
              #region check after Update
              string filename = "";
              int result = DateTime.Compare(RddatetimeFrom.SelectedDate.Value, RddatetimeTo.SelectedDate.Value);
@@ -1836,7 +1876,7 @@ namespace MaricoPay.uc
 
          protected void btnSubmit_Click(object sender, EventArgs e)
          {
-          //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
 
              Session["CreateASPF"] = "Update successfull";
              try

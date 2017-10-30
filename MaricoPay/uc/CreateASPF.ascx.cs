@@ -46,7 +46,7 @@ namespace MaricoPay.uc
                     RddatetimeFrom.SelectedDate = DateTime.Now;
                     LoadASPF_Detail("");
                     LoadInfoUser();
-                    ShowEmptyGrid(10);
+                    ShowEmptyGrid(15);
 
              
 
@@ -435,7 +435,10 @@ namespace MaricoPay.uc
 
                 for (int i = 0; i < rows; i++)
                 {
-                    dtdetail = addNewRow(dtdetail);
+                 //   dtdetail = addNewRow(dtdetail);
+                    DataRow drNewRow = dtdetail.NewRow();
+                    dtdetail.Rows.Add(drNewRow);
+                   
                 }
 
                 ViewState["Data_Kienthuc"] = dtdetail;
@@ -1306,7 +1309,7 @@ namespace MaricoPay.uc
          protected void btnSave_Click(object sender, EventArgs e)
          {
              string filename = "";
-          //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
              if (FileUpload1.HasFile)
              {
                  try
@@ -1879,7 +1882,7 @@ namespace MaricoPay.uc
          protected void btnSubmit_Click(object sender, EventArgs e)
          {
 
-          //   int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
+             int monthStart, MonthEnd, quarterNumber1, quarterNumber2;
             ///////////// -----------------
              try
              {
