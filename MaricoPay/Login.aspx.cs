@@ -205,11 +205,12 @@ namespace MaricoPay
                                 DataTable costcenterfc = cls.GetDataTable("sp_getCostCenterFunctionFromUser", new string[] { "@username" }, new object[] { usern1 });
                                 string costcenter = cls.cToString(costcenterfc.Rows[0]["Costcenter"]);
                                 string functionfk = cls.cToString0(costcenterfc.Rows[0]["Function_FK"]);
+                                isN3 = cls.cToBool(costcenterfc.Rows[0]["IsHaveN3"]);
                                 System.Data.DataTable tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
                                 int index = cls.Search_DataTablei(tbltemp, "Username", emailn1);
-                                if (index >= 0)//N1 co trong ds manager thi chac chan ko co bao cao RSM
+                                if (isN3==false)//N1 co trong ds manager thi chac chan ko co bao cao RSM
                                 {
-                                    isN3 = false;
+                                    //isN3 = false;
                                     int ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
                                     System.Data.DataTable tblss = cls.GetDataTable("sp_getSeniDirVPCOOUser", "@username", emailn1);
                                     if (tblss.Rows.Count > 0)
@@ -237,8 +238,8 @@ namespace MaricoPay
                                 }
                                 else
                                 {
-                                    string sIsN3 = cls.GetString("sp_getIsN3FromRecomender", new string[] { "@Recoment" }, new object[] { emailn1 });
-                                    isN3 = cls.cToBool(sIsN3);
+                                   // string sIsN3 = cls.GetString("sp_getIsN3FromRecomender", new string[] { "@Recoment" }, new object[] { emailn1 });
+                                   // isN3 = cls.cToBool(sIsN3);
                                     System.Data.DataTable tblss = cls.GetDataTable("sp_getSeniDirVPCOOUser", "@username", emailn1);
                                     if (tblss.Rows.Count > 0)
                                     {
@@ -366,6 +367,7 @@ namespace MaricoPay
                                 //update full name
                                 //cls.bCapNhat(new string[] { "@username", "@Fullname" }, new object[] { Session["username"], Session["fullname"] }, "sp_updateFullName");
                                 DataTable costcenterfc = cls.GetDataTable("sp_getCostCenterFunctionFromUser", new string[] { "@username" }, new object[] { usern1 });
+                                isN3 = cls.cToBool(costcenterfc.Rows[0]["IsHaveN3"]);
                                 if (costcenterfc.Rows.Count <= 0)
                                 {
                                     MsgBox1.AddMessage("N1 does not exists", uc.ucMsgBox.enmMessageType.Error);
@@ -375,9 +377,9 @@ namespace MaricoPay
                                 string functionfk = cls.cToString0(costcenterfc.Rows[0]["Function_FK"]);
                                 System.Data.DataTable tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
                                 int index = cls.Search_DataTablei(tbltemp, "Username", emailn1);
-                                if (index >= 0)//N1 co trong ds manager thi chac chan ko co bao cao RSM
+                                if (isN3==false)//N1 co trong ds manager thi chac chan ko co bao cao RSM
                                 {
-                                    isN3 = false;
+                                   // isN3 = false;
                                     int ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
                                     System.Data.DataTable tblss = cls.GetDataTable("sp_getSeniDirVPCOOUser", "@username", emailn1);
                                     if (tblss.Rows.Count > 0)
@@ -405,8 +407,8 @@ namespace MaricoPay
                                 }
                                 else
                                 {
-                                    string sIsN3 = cls.GetString("sp_getIsN3FromRecomender", new string[] { "@Recoment" }, new object[] { emailn1 });
-                                    isN3 = cls.cToBool(sIsN3);
+                                   // string sIsN3 = cls.GetString("sp_getIsN3FromRecomender", new string[] { "@Recoment" }, new object[] { emailn1 });
+                                   // isN3 = cls.cToBool(sIsN3);
                                     System.Data.DataTable tblss = cls.GetDataTable("sp_getSeniDirVPCOOUser", "@username", emailn1);
                                     if (tblss.Rows.Count > 0)
                                     {

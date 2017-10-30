@@ -460,28 +460,78 @@ namespace MaricoPay
         }
         private void LoadTinhS()
         {
-            DataTable tbltinh = cls.GetDataTable("sp_getTinh");
+            DataTable tbltinh;
+            if (CacheHelper.Get("cTinhThanh") != null)
+                 {
+             tbltinh = (DataTable) CacheHelper.Get("cTinhThanh");
+            }
+            else {
+                 tbltinh = cls.GetDataTable("sp_getTinh");
+               
+                CacheHelper.SetDays("cTinhThanh", tbltinh, 30);
+            }
             droTinhS.DataSource = tbltinh;
             droTinhS.DataBind();
-            CacheHelper.Set("cTinhThanh", tbltinh);
-            
         }
         private void LoadHuyenS(int MaTP)
         {
-            DataTable tblhuyen = cls.GetDataTable("sp_getHuyen","@MaTP",MaTP);
+            DataTable tblhuyen;
+          
+            if (CacheHelper.Get("cHuyen_" + MaTP) != null)
+            {
+                tblhuyen = (DataTable)CacheHelper.Get("cHuyen_" + MaTP);
+            }
+            else
+            {
+                tblhuyen = cls.GetDataTable("sp_getHuyen", "@MaTP", MaTP);
+
+                CacheHelper.SetDays("cHuyen_"+MaTP, tblhuyen, 30);
+            }
             droHuyenS.DataSource = tblhuyen;
             droHuyenS.DataBind();
+
+
+
 
         }
         private void LoadTinhC()
         {
-            DataTable tbltinh = cls.GetDataTable("sp_getTinh");
+            //DataTable tbltinh = cls.GetDataTable("sp_getTinh");
+            //droTinhC.DataSource = tbltinh;
+            //droTinhC.DataBind();
+
+            DataTable tbltinh;
+            if (CacheHelper.Get("cTinhThanh") != null)
+            {
+                tbltinh = (DataTable)CacheHelper.Get("cTinhThanh");
+            }
+            else
+            {
+                tbltinh = cls.GetDataTable("sp_getTinh");
+
+                CacheHelper.SetDays("cTinhThanh", tbltinh, 30);
+            }
             droTinhC.DataSource = tbltinh;
             droTinhC.DataBind();
         }
         private void LoadHuyenC(int MaTP)
         {
-            DataTable tblhuyen = cls.GetDataTable("sp_getHuyen", "@MaTP", MaTP);
+            //DataTable tblhuyen = cls.GetDataTable("sp_getHuyen", "@MaTP", MaTP);
+            //droHuyenC.DataSource = tblhuyen;
+            //droHuyenC.DataBind();
+
+            DataTable tblhuyen;
+
+            if (CacheHelper.Get("cHuyen_" + MaTP) != null)
+            {
+                tblhuyen = (DataTable)CacheHelper.Get("cHuyen_" + MaTP);
+            }
+            else
+            {
+                tblhuyen = cls.GetDataTable("sp_getHuyen", "@MaTP", MaTP);
+
+                CacheHelper.SetDays("cHuyen_" + MaTP, tblhuyen, 30);
+            }
             droHuyenC.DataSource = tblhuyen;
             droHuyenC.DataBind();
 
@@ -495,7 +545,7 @@ namespace MaricoPay
             dropMarket.DataSource = kq;
             dropMarket.DataBind();
             ds.Dispose();
-
+           
         }
         private void GetNewClaim()
         {

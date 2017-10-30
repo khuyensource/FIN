@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MaricoPay.DB;
+using System.Data;
 
 namespace MaricoPay.uc
 {
@@ -47,12 +48,29 @@ namespace MaricoPay.uc
         {
             using (var db = new DBTableDataContext())
             {
-               // var model = db.Charges.OrderBy(t => t.No).SingleOrDefault(t1 => t1.Active == true);
-                var model = db.DepartmentMPAYs.Where(o => o.Active == true && o.Loai=="ALL").ToList();//.Select(o => o.Active == true).ToList();
-                radcomboCharges.DataSource = model;
-                radcomboCharges.DataBind();
-                //  RG.DataSource = model;
-                //RG.DataBind();
+               //// var model = db.Charges.OrderBy(t => t.No).SingleOrDefault(t1 => t1.Active == true);
+               // var model = db.DepartmentMPAYs.Where(o => o.Active == true && o.Loai=="ALL").ToList();//.Select(o => o.Active == true).ToList();
+               // radcomboCharges.DataSource = model;
+               // radcomboCharges.DataBind();
+               // //  RG.DataSource = model;
+               // //RG.DataBind();
+
+               // var model;
+                if (CacheHelper.Get("cdepart") != null)
+                {
+                    var model = CacheHelper.Get("cdepart");
+                    radcomboCharges.DataSource = model;
+                    radcomboCharges.DataBind();
+                }
+                else
+                {
+                    var model = db.DepartmentMPAYs.Where(o => o.Active == true && o.Loai == "ALL").ToList();
+
+                    CacheHelper.SetDays("cdepart", model, 30);
+                    radcomboCharges.DataSource = model;
+                    radcomboCharges.DataBind();
+                }
+               
             }
         }
       

@@ -172,6 +172,7 @@
     <Content Include="Autotranfer.aspx" />
     <Content Include="AutotranferList.aspx" />
     <Content Include="BudgetChecking.aspx" />
+    <Content Include="CacheManagement.aspx" />
     <Content Include="changepass.aspx" />
     <Content Include="CheckingOnline.aspx" />
     <Content Include="ClaimExpenses.aspx" />
@@ -442,6 +443,13 @@
     </Compile>
     <Compile Include="BudgetChecking.aspx.designer.cs">
       <DependentUpon>BudgetChecking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CacheManagement.aspx.cs">
+      <DependentUpon>CacheManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CacheManagement.aspx.designer.cs">
+      <DependentUpon>CacheManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="changepass.aspx.cs">
       <DependentUpon>changepass.aspx</DependentUpon>
