@@ -2823,7 +2823,14 @@ public class CacheHelper
                                          CacheItemPriority.Default, null
             );
     }
-
+ public static void SetDays(string key, object value, int days)
+    {
+        HttpContext.Current.Cache.Insert(key, value, null,
+                                         DateTime.Now.AddDays(days),
+                                         TimeSpan.Zero,
+                                         CacheItemPriority.Default, null
+            );
+    }
     public static void Set(string key, object value, int minutes, CacheDependency dependence)
     {
         HttpContext.Current.Cache.Insert(key, value, dependence,
