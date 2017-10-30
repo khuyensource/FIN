@@ -32,13 +32,27 @@ namespace MaricoPay
         private void LoadClaimApp(object username,DateTime tungay,DateTime denngay,int loai,string docno)
         {
 
-            DataTable kq = new DataTable();
+            //DataTable kq = new DataTable();
 
-            kq = cls.GetDataTable("sp_ReportWorkingPlan", new string[] { "@username", "@tungay", "@denngay","@Loai","@docno" }, new object[] { username, tungay, denngay,loai,docno });
-            Session["RWK"] = kq;
-            RadGrid1.DataSource = kq;
+            //kq = cls.GetDataTable("sp_ReportWorkingPlan", new string[] { "@username", "@tungay", "@denngay","@Loai","@docno" }, new object[] { username, tungay, denngay,loai,docno });
+            //Session["RWK"] = kq;
+            //RadGrid1.DataSource = kq;
+            //RadGrid1.DataBind();
+
+            DataTable tbl;
+            if (CacheHelper.Get("creportwk_" + cls.cToString(username) + cls.Date2sDdMmYyy(tungay,"")+ cls.Date2sDdMmYyy(denngay,"")+cls.cToString0(loai)+docno) != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("creportwk_" + cls.cToString(username) + cls.Date2sDdMmYyy(tungay, "") + cls.Date2sDdMmYyy(denngay, "") + cls.cToString0(loai) + docno);
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_ReportWorkingPlan", new string[] { "@username", "@tungay", "@denngay", "@Loai", "@docno" }, new object[] { username, tungay, denngay, loai, docno });
+
+                CacheHelper.Set("creportwk_" + cls.cToString(username) + cls.Date2sDdMmYyy(tungay, "") + cls.Date2sDdMmYyy(denngay, "") + cls.cToString0(loai) + docno, tbl, 30);
+            }
+            Session["RWK"] = tbl;
+            RadGrid1.DataSource = tbl;
             RadGrid1.DataBind();
-
         }
 
         protected void RadGrid1_ItemCommand(object sender, GridCommandEventArgs e)

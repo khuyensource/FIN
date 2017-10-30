@@ -123,6 +123,7 @@ namespace MaricoPay
                  kqs = kqs +"/n/r"+ kq;
                 }
             }
+            CacheHelper.RemoveLikeKey("creportwk_");
             LoadClaimApp(Session["username"]);
             MsgBox1.AddMessage(kqs, uc.ucMsgBox.enmMessageType.Info);
           //  }
@@ -182,6 +183,7 @@ namespace MaricoPay
                 }
                 else
                 {
+                   // CacheHelper.RemoveLikeKey("creportwk_");
                     kqstring = "Đã duyệt: " + emailcreate + "(" + docno + ");";
                     kq = sys.SendMailASP(emailcreate, "Working plan has been Approved", "Working plan " + docno + " has been approved by " + cls.cToString(Session["username"]));
                 }

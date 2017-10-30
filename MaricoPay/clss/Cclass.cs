@@ -2797,6 +2797,18 @@ public class CacheHelper
     {
         HttpContext.Current.Cache.Remove(key);
     }
+    public static void RemoveLikeKey(string key)
+    {
+        foreach (DictionaryEntry c in System.Web.HttpContext.Current.Cache)
+        {
+            key = (string)c.Key;
+            if (key.Contains("key"))
+            {
+                HttpContext.Current.Cache.Remove(key);
+            }
+        }
+        
+    }
 
     public static void Set(string key, object value)
     {

@@ -255,16 +255,44 @@ namespace MaricoPay
         }
         private void LoadASPNo()
         {
-           DataTable tbl= cls.GetDataTable("sp_GetASPNo");
-           radcomboASP.DataSource = tbl;
-           radcomboASP.DataBind();
+           //DataTable tbl= cls.GetDataTable("sp_GetASPNo");
+           //radcomboASP.DataSource = tbl;
+           //radcomboASP.DataBind();
+
+            //cIOContract  CacheHelper.RemoveLikeKey("ccategory_");
+            DataTable tbl;
+            if (CacheHelper.Get("cIOContract") != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("cIOContract");
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_GetASPNo");
+
+                CacheHelper.SetDays("cIOContract", tbl, 1);
+            }
+            radcomboASP.DataSource = tbl;
+            radcomboASP.DataBind();
         }
         public void FLoadVendor(string PurOrg)
         {
           
            // Cclass cls = new Cclass();
             //get purcharg org from
-            DataTable tbl = cls.GetDataTable("sp_getvedors", "@Purorg", PurOrg);
+         //   DataTable tbl = cls.GetDataTable("sp_getvedors", "@Purorg", PurOrg);
+           
+
+            DataTable tbl;
+            if (CacheHelper.Get("cVendor_" + PurOrg.ToUpper()) != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("cVendor_"+ PurOrg.ToUpper());
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_getvedors", "@Purorg", PurOrg.ToUpper());
+
+                CacheHelper.SetDays("cVendor_"+ PurOrg.ToUpper(), tbl, 30);
+            }
             radcmbVendor.DataSource = tbl;
             radcmbVendor.DataBind();
         }
@@ -272,25 +300,68 @@ namespace MaricoPay
         {
             using (var db = new DBTableDataContext())
             {
-                // var model = db.Charges.OrderBy(t => t.No).SingleOrDefault(t1 => t1.Active == true);
-                var model = db.ContractTypes.Where(o => o.Active == true).ToList();//.Select(o => o.Active == true).ToList();
-                dropContractType.DataSource = model;
-                dropContractType.DataBind();
-                //  RG.DataSource = model;
-                //RG.DataBind();
+                if (CacheHelper.Get("cTypeContract") != null)
+                {
+                    var model = CacheHelper.Get("cTypeContract");
+                    dropContractType.DataSource = model;
+                    dropContractType.DataBind();
+                }
+                else
+                {
+                    // var model = db.Charges.OrderBy(t => t.No).SingleOrDefault(t1 => t1.Active == true);
+                    var model = db.ContractTypes.Where(o => o.Active == true).ToList();//.Select(o => o.Active == true).ToList();
+                    CacheHelper.SetDays("cTypeContract", model, 30);
+                    dropContractType.DataSource = model;
+                    dropContractType.DataBind();
+                    //  RG.DataSource = model;
+                    //RG.DataBind();
+                }
             }
         }
         private void LoadLegal()
         {
-            DataTable tbl = cls.GetDataTable("sp_getEmailAllLegalContract");
-           dropLegal.DataSource = tbl;
-           dropLegal.DataBind();
-           ddlLegalChange.DataSource = tbl;
-           ddlLegalChange.DataBind();
+            //cEmailLGFC
+           // DataTable tbl = cls.GetDataTable("sp_getEmailAllLegalContract");
+           //dropLegal.DataSource = tbl;
+           //dropLegal.DataBind();
+           //ddlLegalChange.DataSource = tbl;
+           //ddlLegalChange.DataBind();
+
+            DataTable tbl;
+            if (CacheHelper.Get("cEmailLG") != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("cEmailLG");
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_getEmailAllLegalContract");
+
+                CacheHelper.SetDays("cEmailLG", tbl, 30);
+            }
+            dropLegal.DataSource = tbl;
+            dropLegal.DataBind();
+            ddlLegalChange.DataSource = tbl;
+            ddlLegalChange.DataBind();
         }
         private void LoadFinance()
         {
-            DataTable tbl = cls.GetDataTable("sp_getEmailAllFinanceContract");
+            //DataTable tbl = cls.GetDataTable("sp_getEmailAllFinanceContract");
+            //dropFinance.DataSource = tbl;
+            //dropFinance.DataBind();
+            //ddlFinanceChange.DataSource = tbl;
+            //ddlFinanceChange.DataBind();
+
+            DataTable tbl;
+            if (CacheHelper.Get("cEmailFC") != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("cEmailFC");
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_getEmailAllFinanceContract");
+
+                CacheHelper.SetDays("cEmailLFC", tbl, 30);
+            }
             dropFinance.DataSource = tbl;
             dropFinance.DataBind();
             ddlFinanceChange.DataSource = tbl;
@@ -299,7 +370,18 @@ namespace MaricoPay
         private void LoadOrg(string type)
         {
             DataTable tbl = new DataTable();
-            tbl = cls.GetDataTable("sp_getOrg", "@type", type);
+            //tbl = cls.GetDataTable("sp_getOrg", "@type", type);
+           // DataTable tbl;
+            if (CacheHelper.Get("cOrgContract") != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("cOrgContract");
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_getOrg", "@type", type);
+
+                CacheHelper.SetDays("cOrgContract", tbl, 30);
+            }
             dropOrg.DataSource = tbl;
             dropOrg.DataBind();
         }

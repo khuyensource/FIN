@@ -1649,9 +1649,9 @@ namespace MaricoPay
                }
                else
                {
-
-                  // string emailhanhchanh = cls.GetString("sp_getEmailHanhChanh", new string[] { "@Code" }, new object[] { docno });
-                   string to = txtMyEmail.Text;
+                    CacheHelper.RemoveLikeKey("creportwk_");
+                    // string emailhanhchanh = cls.GetString("sp_getEmailHanhChanh", new string[] { "@Code" }, new object[] { docno });
+                    string to = txtMyEmail.Text;
                  //  if (emailhanhchanh != "")
                  //  {
                  //      to = to + ";" + emailhanhchanh;

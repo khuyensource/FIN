@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace MaricoPay
 {
-    public partial class CacheManagement : System.Web.UI.Page
+    public partial class CacheManagement :  clsPhanQuyenCaoCap
     {
         Cclass cls = new Cclass();
         protected void Page_Load(object sender, EventArgs e)
@@ -44,6 +44,35 @@ namespace MaricoPay
                 CacheHelper.Remove("cHuyen_"+ cls.cToString(tbltinh.Rows[i]["MaTP"]));
             }
            
+        }
+
+        protected void btCharge_Click(object sender, EventArgs e)
+        {
+            CacheHelper.Remove("ccharge");
+        }
+
+        protected void btCategory_Click(object sender, EventArgs e)
+        {
+            CacheHelper.RemoveLikeKey("ccategory_");
+        }
+
+        protected void btIOcontract_Click(object sender, EventArgs e)
+        {
+            CacheHelper.Remove("cIOContract");
+        }
+
+        protected void btEmailLG_FC_Click(object sender, EventArgs e)
+        {
+            CacheHelper.Remove("cEmailLG");
+            CacheHelper.Remove("cEmailFC");
+           
+            
+        }
+
+        protected void btOrgType_Click(object sender, EventArgs e)
+        {
+            CacheHelper.Remove("cOrgContract");
+            CacheHelper.Remove("cTypeContract");
         }
     }
 }

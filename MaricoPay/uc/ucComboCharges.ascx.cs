@@ -33,11 +33,26 @@ namespace MaricoPay.uc
             using (var db = new DBTableDataContext())
             {
                // var model = db.Charges.OrderBy(t => t.No).SingleOrDefault(t1 => t1.Active == true);
-                var model = db.Charges.ToList().OrderBy(o=>o.No);
-                radcomboCharges.DataSource = model;
-                radcomboCharges.DataBind();
+               // var model = db.Charges.ToList().OrderBy(o=>o.No);
+              //  radcomboCharges.DataSource = model;
+              //  radcomboCharges.DataBind();
                 //  RG.DataSource = model;
                 //RG.DataBind();
+
+                if (CacheHelper.Get("ccharge") != null)
+                {
+                    var model = CacheHelper.Get("ccharge");
+                    radcomboCharges.DataSource = model;
+                    radcomboCharges.DataBind();
+                }
+                else
+                {
+                    var model = db.Charges.ToList().OrderBy(o => o.No);
+
+                    CacheHelper.SetDays("ccharge", model, 30);
+                    radcomboCharges.DataSource = model;
+                    radcomboCharges.DataBind();
+                }
             }
         }
        public string Text

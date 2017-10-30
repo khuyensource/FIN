@@ -235,6 +235,7 @@
                             <asp:MenuItem Text="Authorization" Value="doa1" NavigateUrl="~/phanquyen.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Admin" Value="admin" NavigateUrl="~/admin.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="AD Users" Value="ADUsers" NavigateUrl="~/ADUser.aspx"></asp:MenuItem>
+                             <asp:MenuItem Text="Clear Cache" Value="ADCache" NavigateUrl="~/CacheManagement.aspx"></asp:MenuItem>
                         </asp:MenuItem>
                          
                     </Items>

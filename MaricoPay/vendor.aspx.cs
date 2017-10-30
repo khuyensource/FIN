@@ -53,8 +53,24 @@ namespace MaricoPay
             }
             Session["vendorname"] = cls.GetString("insert_vendor", new string[] { "@VendorName", "@Active", "@Type", "@Address", "@TaxCode", "@BankAcc", "@BankNum", "@BankName", "@BankCity", "@Tel","@PurOrg","@VendorCode" }
                 , new object[] { txtName.Text.Trim(), 1, "SP", txtAdd.Text.Trim(), txtTax.Text.Trim(), txtBanAcc.Text.Trim(), txtBankNo.Text.Trim(), txtBankName.Text.Trim(), txtBankcity.Text.Trim(), txtTel.Text.Trim(), txtPurOrg.Text.Trim(),""});
+            string[] org = txtPurOrg.Text.Replace(" ", "").Split(',');
+            if (org.Length > 0)
+            {
+                for (int i = 0; i < org.Length; i++)
+                {
+                    CacheHelper.Remove("cVendor_" + org[i].ToUpper());
+                    DataTable tbl = cls.GetDataTable("sp_getvedors", "@Purorg", org[i].ToUpper());
+                    CacheHelper.SetDays("cVendor_" + org[i].ToUpper(), tbl, 30);
+                }
 
-          
+            }
+            else
+            {
+                CacheHelper.Remove("cVendor_" + txtPurOrg.Text.Replace(" ", "").ToUpper());
+                DataTable tbl = cls.GetDataTable("sp_getvedors", "@Purorg", txtPurOrg.Text.Replace(" ", "").ToUpper());
+                CacheHelper.SetDays("cVendor_" + txtPurOrg.Text.Replace(" ", "").ToUpper(), tbl, 30);
+            }
+
             Response.Write("<script language=javascript> window.opener.__doPostBack('ChildWindowPostBack', '');window.close();</script>");
 
         }

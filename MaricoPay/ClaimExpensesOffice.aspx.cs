@@ -299,7 +299,21 @@ namespace MaricoPay
         }
         private void LoadCategory(string costcenter)
         {
-            DataTable tbl = cls.GetDataTable("sp_LoadChargesClaim", "@costcenter", costcenter);
+            //DataTable tbl = cls.GetDataTable("sp_LoadChargesClaim", "@costcenter", costcenter);
+            //ddlCategory.DataSource = tbl;
+            //ddlCategory.DataBind();
+
+            DataTable tbl;
+            if (CacheHelper.Get("ccategory_" + costcenter) != null)
+            {
+                tbl = (DataTable)CacheHelper.Get("ccategory_" + costcenter);
+            }
+            else
+            {
+                tbl = cls.GetDataTable("sp_LoadChargesClaim", "@costcenter", costcenter);
+
+                CacheHelper.SetDays("ccategory_" + costcenter, tbl, 30);
+            }
             ddlCategory.DataSource = tbl;
             ddlCategory.DataBind();
         }
