@@ -202,16 +202,33 @@ namespace MaricoPay
                                 // Session["usern1"] = cls.get_UsernameFromEmail(emailn1);
                                 emailn1 = cls.cToString(Session["emailn1"]);
                                 usern1 = cls.cToString(Session["usern1"]);
-                                DataTable costcenterfc = cls.GetDataTable("sp_getCostCenterFunctionFromUser", new string[] { "@username" }, new object[] { usern1 });
+                                DataTable costcenterfc = cls.GetDataTable("sp_getCostCenterFunctionFromUserN1", new string[] { "@usernamen1" }, new object[] { usern1 });
                                 string costcenter = cls.cToString(costcenterfc.Rows[0]["Costcenter"]);
                                 string functionfk = cls.cToString0(costcenterfc.Rows[0]["Function_FK"]);
                                 isN3 = cls.cToBool(costcenterfc.Rows[0]["IsHaveN3"]);
-                                System.Data.DataTable tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
+                              //  System.Data.DataTable tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
+                                DataTable tbltemp;
+                                if (CacheHelper.Get("cSenDirVPCOO") != null)
+                                {
+                                    tbltemp = (DataTable)CacheHelper.Get("cSenDirVPCOO");
+
+                                }
+                                else
+                                {
+                                    tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
+
+                                    CacheHelper.SetDays("cSenDirVPCOO", tbltemp, 10);
+                                }
                                 int index = cls.Search_DataTablei(tbltemp, "Username", emailn1);
                                 if (isN3==false)//N1 co trong ds manager thi chac chan ko co bao cao RSM
                                 {
                                     //isN3 = false;
-                                    int ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
+                                    int ps = -1;
+                                    if (index >= 0)
+                                    {
+                                        ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
+                                    }
+                                   // int ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
                                     System.Data.DataTable tblss = cls.GetDataTable("sp_getSeniDirVPCOOUser", "@username", emailn1);
                                     if (tblss.Rows.Count > 0)
                                     {
@@ -366,7 +383,7 @@ namespace MaricoPay
                                 int company = 1;
                                 //update full name
                                 //cls.bCapNhat(new string[] { "@username", "@Fullname" }, new object[] { Session["username"], Session["fullname"] }, "sp_updateFullName");
-                                DataTable costcenterfc = cls.GetDataTable("sp_getCostCenterFunctionFromUser", new string[] { "@username" }, new object[] { usern1 });
+                                DataTable costcenterfc = cls.GetDataTable("sp_getCostCenterFunctionFromUserN1", new string[] { "@usernamen1" }, new object[] { usern1 });
                                 isN3 = cls.cToBool(costcenterfc.Rows[0]["IsHaveN3"]);
                                 if (costcenterfc.Rows.Count <= 0)
                                 {
@@ -375,12 +392,31 @@ namespace MaricoPay
                                 }
                                 string costcenter = cls.cToString(costcenterfc.Rows[0]["Costcenter"]);
                                 string functionfk = cls.cToString0(costcenterfc.Rows[0]["Function_FK"]);
-                                System.Data.DataTable tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
+                              //  System.Data.DataTable tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
+                                DataTable tbltemp;
+                                if (CacheHelper.Get("cSenDirVPCOO") != null)
+                                {
+                                    tbltemp = (DataTable)CacheHelper.Get("cSenDirVPCOO");
+
+                                }
+                                else
+                                {
+                                    tbltemp = cls.GetDataTable("sp_CreateTableSenDirVPCOO");
+
+                                    CacheHelper.SetDays("cSenDirVPCOO", tbltemp, 10);
+                                }
+
                                 int index = cls.Search_DataTablei(tbltemp, "Username", emailn1);
                                 if (isN3==false)//N1 co trong ds manager thi chac chan ko co bao cao RSM
                                 {
-                                   // isN3 = false;
-                                    int ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
+                                    // isN3 = false;
+                                    int ps = -1;
+                                   if (index>=0)
+                                    {
+                                        ps = cls.cToInt(tbltemp.Rows[index]["Position"]);
+                                    }
+                                  
+                                    
                                     System.Data.DataTable tblss = cls.GetDataTable("sp_getSeniDirVPCOOUser", "@username", emailn1);
                                     if (tblss.Rows.Count > 0)
                                     {

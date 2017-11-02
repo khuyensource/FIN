@@ -40,7 +40,7 @@
                    <asp:Button ID="btOrgType" runat="server" Text="Clear Cache Contract Org & Type" OnClick="btOrgType_Click" />
                 </td>
                  <td>
-                  
+                  <asp:Button ID="btsendivpcoo" runat="server" Text="Clear Cache Senior-Director-VP-COO" OnClick="btsendivpcoo_Click" />
                 </td>
             </tr>
         </table>

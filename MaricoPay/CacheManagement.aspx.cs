@@ -74,5 +74,10 @@ namespace MaricoPay
             CacheHelper.Remove("cOrgContract");
             CacheHelper.Remove("cTypeContract");
         }
+
+        protected void btsendivpcoo_Click(object sender, EventArgs e)
+        {
+            CacheHelper.Remove("cSenDirVPCOO");
+        }
     }
 }
